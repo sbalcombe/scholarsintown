@@ -5,19 +5,15 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema sit
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Table `scholars`
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
-USE `mydb` ;
+DROP TABLE IF EXISTS `scholars` ;
 
--- -----------------------------------------------------
--- Table `mydb`.`scholars`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`scholars` (
+CREATE TABLE IF NOT EXISTS `scholars` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `full_name` VARCHAR(45) NOT NULL,
   `affiliation` VARCHAR(45) NOT NULL,
@@ -30,9 +26,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`series`
+-- Table `series`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`series` (
+DROP TABLE IF EXISTS `series` ;
+
+CREATE TABLE IF NOT EXISTS `series` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
@@ -40,9 +38,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`events`
+-- Table `events`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`events` (
+DROP TABLE IF EXISTS `events` ;
+
+CREATE TABLE IF NOT EXISTS `events` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `speaker_name` VARCHAR(45) NOT NULL,
   `topic` VARCHAR(45) NOT NULL,
@@ -50,17 +50,19 @@ CREATE TABLE IF NOT EXISTS `mydb`.`events` (
   `series_id` INT NOT NULL,
   PRIMARY KEY (`id`, `series_id`),
   CONSTRAINT `fk_events_series`
-    FOREIGN KEY ()
-    REFERENCES `mydb`.`series` ()
+    FOREIGN KEY (`id`)
+    REFERENCES `series` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`events_scholars`
+-- Table `events_scholars`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`events_scholars` (
+DROP TABLE IF EXISTS `events_scholars` ;
+
+CREATE TABLE IF NOT EXISTS `events_scholars` (
   `events_id` INT NOT NULL,
   `scholars_id` INT NOT NULL,
   PRIMARY KEY (`events_id`, `scholars_id`),
@@ -68,12 +70,12 @@ CREATE TABLE IF NOT EXISTS `mydb`.`events_scholars` (
   INDEX `fk_events_has_scholars_events_idx` (`events_id` ASC),
   CONSTRAINT `fk_events_has_scholars_events`
     FOREIGN KEY (`events_id`)
-    REFERENCES `mydb`.`events` (`id`)
+    REFERENCES `events` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_events_has_scholars_scholars1`
     FOREIGN KEY (`scholars_id`)
-    REFERENCES `mydb`.`scholars` (`id`)
+    REFERENCES `scholars` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
