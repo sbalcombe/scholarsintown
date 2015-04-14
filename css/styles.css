@@ -1,0 +1,157 @@
+/*=====================================
+			GLOBAL STYLES
+======================================*/
+
+.secondary-text {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.modal .modal-header {
+	float: right;
+}
+/*=====================================
+			Form Styles
+======================================*/			
+
+  /* label color */
+   .input-field label {
+     color: #000;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #E91E63;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #E91E63;
+     box-shadow: 0 1px 0 0 #E91E63;
+   }
+   
+
+/*=====================================
+			STATUS BAR 
+======================================*/
+
+#status .navbar-fixed {
+	height: 20px;
+	background-color: #0066BA;
+}
+
+/*=====================================
+		   PRE LOG IN NAVBAR
+======================================*/
+#preNav nav {
+	height: auto;
+	line-height: 36px;
+}  
+
+#preNav nav .brand-logo {
+	top: 25%;
+    left: 25%;
+}
+
+#preNav nav .btn {
+	margin: 8px 24px 8px;
+	float: right;
+}
+
+#preNav .divider {
+	width: 90%;
+	margin: auto;
+}
+
+#preNav .about {
+	padding-left: 16px;
+}
+
+#preNav .about:hover {
+	color: #fff;
+}
+
+#preNav .sign-up {
+	padding-left: 16px;
+}
+
+#preNav .sign-up:hover {
+	color: #fff;
+}
+
+@media only screen and (max-width : 600px) {
+	#preNav nav .brand-logo {
+		font-size: 20px;
+	}
+
+	#preNav nav .btn {
+		line-height: 24px;
+		height: 24px;
+		padding: 0px 6px 3px 6px;
+		font-size: 14px;
+		text-transform: none;
+	}	
+
+}	
+
+/*=====================================
+			LOGGED IN NAVBAR
+======================================*/
+
+#navBar {
+	margin-top: 20px;
+}
+
+#navBar nav {
+	height: auto;
+}
+
+#navBar nav .btn-floating {
+	margin-bottom: -62px;
+}
+
+#navBar nav .input-field {
+	width: 80%;
+	margin-left: 20%;
+}
+
+#navBar .search {
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+/*=======================================
+			SIGN IN MODAL
+========================================*/
+
+#signin {
+	position: absolute;
+}	
+
+#signin .modal .modal-content {
+    padding: 16px;
+}	
+
+#signin .input-field {
+	margin-bottom: 8px;
+}
+
+#signin p {
+	margin: 0 auto;
+}
+
+#signin form .btn {
+	left: 25%;
+	margin-top: 16px;
+	background-color: #E91E63;
+}
+/*=====================================
+				CARDS
+======================================*/
+#recent .card-panel {
+	margin-top: 54px;
+}
+
+#discover .card-panel {
+	margin-top: 54px;
+}
+
+/
