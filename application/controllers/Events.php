@@ -15,15 +15,12 @@ class Events extends CI_Controller {
         {
                 $data['events'] = $this->events_model->get_events();
 				if (isset($_SESSION['logged']) && $_SESSION['logged']) { $data['name'] = $_SESSION['name']; }
-				$this->load->view('templates/header', $data);
 				$this->load->view('events/index', $data);
         }
 		
 		public function discover()
         {
                 $data['events'] = $this->events_model->get_events();
-				
-				$this->load->view('templates/header', $data);
 				$this->load->view('events/index', $data);
         }
 }
