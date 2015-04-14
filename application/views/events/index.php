@@ -254,10 +254,9 @@
                     
       <!--Import jQuery before materialize.js-->
 
-      <script type="text/javascript" src="<?= base_url('js/jquery.min.js')?>"></script>
-      <script type="text/javascript" src="<?= base_url('js/materialize.min.js')?>"></script>
-
-      <script type="text/javascript" src="<?= base_url('js/custom.js')?>"></script>
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/custom.js"></script>
 
     </body>
   </html>
