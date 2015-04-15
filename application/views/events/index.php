@@ -43,7 +43,7 @@
       <div class="navbar-fixed blue">
         <nav>
           <div class="nav-wrapper blue">
-              <a href="#" class="brand-logo">ScholarsinTown</a>
+              <a href="#" class="brand-logo">ScholarsinTownz</a>
               <a class="waves-effect waves-light btn pink modal-trigger" href="#signin">Sign In</a>
             <div class="divider"></div>  
               <a class="about secondary-text" href="http://www.scholarsintown.com/about">About</a>
@@ -56,53 +56,38 @@
   <!--========================================
                 SIGNED IN NAVBAR
   ==========================================-->  
+
    
     <section id="navBar">       
       <div class="navbar-fixed blue">
         <nav class="blue">
           <div class="nav-wrapper blue">
-            <a href="#profile" class="navlink"><i class="mdi-action-account-circle"></i></a>
-            <div class="search">
-            <div class="input-field">
-              <input id="search" type="search" required>
-              <label for="search"><i class="mdi-action-search"></i></label>
-            </div>
-            </div>
-            <ul class="left">
-              <li><a href="#recent">Recent</a></li>
-              <li><a href="#discover">Discover</a></li>
-              <a href="#addevent" class="btn-floating btn-large waves-effect waves-light pink modal-trigger"><i class="mdi-content-add"></i></a>
-            </ul>    
+              <div class="search-bar valign-wrapper">
+                <div class="profile-btn">
+                  <a href="#profile" class="navlink"><i class="mdi-action-account-circle"></i></a>
+                </div>
+                <div class="search">
+                <div class="input-field">
+                  <input id="search" type="search" required>
+                  <label for="search"><i class="mdi-action-search"></i></label>
+                </div>
+                </div>
+              </div>
+              <div class="nav-container">
+                <ul>
+                  <li class="nav-recent"><a href="#recent">Recent</a></li>
+                  <li class="nav-discover"><a href="#discover">Discover</a></li>
+                </ul> 
+              </div> 
           </div>    
         </nav>
+       <a href="#addevent" class="plus-button btn-floating btn-large pink modal-trigger"><i class="mdi-content-add"></i></a>
       </div>
-    </section>           
-
+    </section> 
   <!--======================================
                     CARDS
   =======================================-->                    
 
-    <div class="row">
-    <section id="recent">
-      <div class="container">
-        <div class="col s12 m5">
-          <div class="card-panel">
-            
-          </div>    
-        </div>
-      </div>
-    </section>
-
-    <section id="discover">
-      <div class="container">
-        <div class="col s12 m5">
-          <div class="card-panel">
-            
-          </div>    
-        </div>
-      </div>
-    </section>
-    </div>
   
   <!--======================================
                    MODALS 
