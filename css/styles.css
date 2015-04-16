@@ -2,6 +2,10 @@
 			GLOBAL STYLES
 ======================================*/
 
+html{
+	margin-top: -20px;
+}
+
 body{
 	overflow: hidden;
 }
@@ -13,7 +17,14 @@ body{
 	float: right;
 }
 
+.wrapper{
+	height: 100%;
 
+}
+
+.nav-wrapper {
+	padding: 2% 4.563492063492063% 0 4.563492063492063%;
+}
 
 /*=====================================
 			Form Styles
@@ -22,6 +33,10 @@ body{
   /* label color */
    .input-field label {
      color: #000;
+   }
+
+   .input-field{
+   	margin: 0 !important;
    }
    /* label focus color */
    .input-field input[type=text]:focus + label {
@@ -32,6 +47,8 @@ body{
      border-bottom: 1px solid #E91E63;
      box-shadow: 0 1px 0 0 #E91E63;
    }
+
+
    
 
 /*=====================================
@@ -39,6 +56,7 @@ body{
 ======================================*/
 
 #status .navbar-fixed {
+	width: 100%;
 	height: 20px;
 	background-color: #0066BA;
 }
@@ -46,48 +64,48 @@ body{
 /*=====================================
 		   PRE LOG IN NAVBAR
 ======================================*/
-#preNav nav {
+#navBar nav {
 	height: auto;
 	line-height: 36px;
 }  
 
-#preNav nav .brand-logo {
-	top: 25%;
-    left: 25%;
+#navBar nav .logo {
+	font-size: 20px;
+	margin: 0 0 0 3.5%;
+
 }
 
-#preNav nav .btn {
-	margin: 8px 24px 8px;
+#navBar nav .btn {
 	float: right;
 }
 
-#preNav .divider {
-	width: 90%;
+#navBar .divider {
+	width: 92%;
 	margin: auto;
 }
 
-#preNav .about {
-	padding-left: 16px;
+#navBar .about {
+	margin: 0 0 0 3.5%;
 }
 
-#preNav .about:hover {
+#navBar .about:hover {
 	color: #fff;
 }
 
-#preNav .sign-up {
+#navBar .sign-up {
 	padding-left: 16px;
 }
 
-#preNav .sign-up:hover {
+#navBar .sign-up:hover {
 	color: #fff;
 }
 
 @media only screen and (max-width : 600px) {
-	#preNav nav .brand-logo {
+	#navBar nav .logo {
 		font-size: 20px;
 	}
 
-	#preNav nav .btn {
+	#navBar nav .btn {
 		line-height: 24px;
 		height: 24px;
 		padding: 0px 6px 3px 6px;

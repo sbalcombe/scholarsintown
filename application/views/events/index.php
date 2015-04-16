@@ -20,18 +20,18 @@
 
     <body>
 
+<div class="wrapper">
   <!--=======================================
                 STATUS BAR
   =========================================-->              
-
+<!--
     <section id="status">
-      <div class="navbar-fixed">
         <nav>
           <div class="nav-wrapper blue darken-2" id="status">
           </div>
-        </nav>
-      </div>  
+        </nav> 
     </section>
+-->
 
   <!--========================================
                 PRE LOGIN NAV BAR  
@@ -39,26 +39,26 @@
                 
     <!-- Pre Login Homepage NavBar
           Hide once logged in -->
-    <section id="preNav">       
-      <div class="navbar-fixed blue">
+    <section id="navBar">       
         <nav>
           <div class="nav-wrapper blue">
-              <a href="#" class="brand-logo">ScholarsinTownz</a>
+            <div class="col s12">
+              <a href="#" class="logo">ScholarsinTown</a>
               <a class="waves-effect waves-light btn pink modal-trigger" href="#signin">Sign In</a>
-            <div class="divider"></div>  
+            </div>
+
+          <div class="divider"></div>  
+
+          <div class="col s12">
               <a class="about secondary-text" href="http://www.scholarsintown.com/about">About</a>
               <a href="#signup" class="sign-up modal-trigger secondary-text">Get it now</a>
-            </div>    
+          </div>    
         </nav>
-      </div>
-    </section>
 
   <!--========================================
                 SIGNED IN NAVBAR
-  ==========================================-->  
+  ==========================================-->
 
-   
-    <section id="navBar">       
       <div class="navbar-fixed blue">
         <nav class="blue">
           <div class="nav-wrapper blue">
@@ -69,7 +69,7 @@
                 <div class="search">
                 <div class="input-field">
                   <input id="search" type="search" required>
-                  <label for="search"><i class="mdi-action-search"></i></label>
+                    <label for="search"><i class="mdi-action-search"></i></label>
                 </div>
                 </div>
               </div>
@@ -83,7 +83,10 @@
         </nav>
        <a href="#addevent" class="plus-button btn-floating btn-large pink modal-trigger"><i class="mdi-content-add"></i></a>
       </div>
-    </section> 
+
+    </section>  
+
+</div>
   <!--======================================
                     CARDS
   =======================================-->                    
