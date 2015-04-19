@@ -39,7 +39,8 @@
                 
     <!-- Pre Login Homepage NavBar
           Hide once logged in -->
-    <section id="navBar">       
+    <section id="navBar">   
+	<?php if (!isset($logged) || !$logged): ?>
         <nav>
           <div class="nav-wrapper blue">
             <div class="col s12">
@@ -58,7 +59,8 @@
   <!--========================================
                 SIGNED IN NAVBAR
   ==========================================-->
-
+	<?php else: ?>
+	<a href="<?= site_url('user/logout'); ?>">Logout</a>
       <div class="navbar-fixed blue">
         <nav class="blue">
           <div class="nav-wrapper blue">
@@ -83,7 +85,7 @@
         </nav>
        <a href="#addevent" class="plus-button btn-floating btn-large pink modal-trigger"><i class="mdi-content-add"></i></a>
       </div>
-
+	<?php endif; ?>
     </section>  
 
 </div>
@@ -102,15 +104,17 @@
       <div class="modal-header">
         <a href="#!" class="modal-action modal-close waves-effect waves-light"><i class=" small mdi-navigation-close black-text"></i></a>
       </div>
-      <?php echo form_open('login');?>  
-      <form class="col s12">
+	  <?php
+		$attributes = array('class' => 'col s12');
+		echo form_open('user/login', $attributes);
+	  ?>
         <div class="input-field col s12">
-          <input id="username" type="text" class="validate">
-          <label for="username">Username</label>
+          <input id="email" name="email" type="text" class="validate">
+          <label for="email">Username</label>
         </div>
         <div class="input-field col s12">
-          <input id="password" type="text" class="validate">
-          <label for="last_name">Password</label>
+          <input id="password" name="password" type="password" class="validate">
+          <label for="password">Password</label>
         </div>
 
         <p>
@@ -137,48 +141,45 @@
       <a href="#!" class=" modal-action modal-close waves-effect waves-light"><i class=" small mdi-navigation-close black-text"></i></a>
     </div>  
       <h4>Create an Account</h4>
-      <form class="col s12">
+      <?php
+		$attributes = array('class' => 'col s12');
+		echo form_open('user/signup', $attributes);
+	  ?>
         <div class="input-field col s12">
-          <input id="first_name" type="text" class="validate">
+          <input id="first_name" name="first_name" type="text" class="validate">
           <label for="first_name">First Name</label>
         </div>
 
         <div class="input-field col s12">
-          <input id="last_name" type="text" class="validate">
+          <input id="last_name" name="last_name" type="text" class="validate">
           <label for="last_name">Last Name</label>
         </div>
 
         <div class="input-field col s12">
-          <input id="affiliation" type="text" class="validate">
+          <input id="affiliation" name="affiliation" type="text" class="validate">
           <label for="affiliation">Affiliation</label>
         </div>
 
         <div class="input-field col s12">
-          <input id="email" type="text" class="validate">
+          <input id="email" name="email" type="text" class="validate">
           <label for="email">Email Address</label>
         </div>
 
         <div class="input-field col s12">
-          <input id="password" type="text" class="validate">
+          <input id="password" name="password" type="text" class="validate">
           <label for="password">Password</label>
         </div>
 
-        <div class="input-field col s12">
-          <select>
-            <option value="" disabled selected>Select your Area of Science</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-           </select>
+        <div class="browser-default">
+			<select name="area_science">
+				<option value="" disabled selected>Select your Area of Science</option>
+				<option value="1">Option 1</option>
+				<option value="2">Option 2</option>
+				<option value="3">Option 3</option>
+			</select>
         </div>
 
-        <div class="input-field col s12">
-          <input id="researcharea" type="text" class="validate">
-          <label for="password">Research Area</label>
-        </div>
-
-        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-        </button>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
       </form>
 
       <!-- Prefill fields with Linkedin Account -->
@@ -235,7 +236,6 @@
 
 
 
-
       <!--======================================
                         SCRIPTS
       =========================================->  
@@ -247,4 +247,4 @@
       <script type="text/javascript" src="js/custom.js"></script>
 
     </body>
-  </html>
+</html>

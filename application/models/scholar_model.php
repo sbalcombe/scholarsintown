@@ -8,16 +8,25 @@ class Scholar_model extends CI_Model {
 		
 		public function login($email, $password)
 		{
-			$this->db->select('scholars')->where('email', $email)->where('password', $password)->limit(1);
-			$query = $this->db->get();
-			if($query -> num_rows() == 1)
+			$sql = "SELECT * FROM scholars WHERE email = ?";
+			$result = $this->db->query($sql, $email);
+			if ($result->num_rows() > 0)
 			{
-				return $query->result();
+				foreach ($result->result() as $row)
+				{
+					if (password_verify($password, $row->password))
+					{
+						return $row;
+					}
+				}
 			}
-			else
-			{
-				return false;
-			}
+			return false;
+		}
+		
+		public function signup($name, $affiliation, $email, $password, $area_science)
+		{
+			$sql = "INSERT INTO scholars (full_name, affiliation, email, password, area_science) VALUES (?, ?, ?, ?, ?)";
+			$query = $this->db->query($sql, array($name, $affiliation, $email, $password, $area_science));
 		}
 }
 ?>
