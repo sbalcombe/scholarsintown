@@ -6,9 +6,10 @@ html{
 	margin-top: -20px;
 }
 
-body{
+#navBar {
 	overflow: hidden;
 }
+
 .secondary-text {
 	color: rgba(255, 255, 255, 0.7);
 }
@@ -20,6 +21,10 @@ body{
 .wrapper{
 	height: 100%;
 
+}
+
+.card-panel {
+	padding: 0;
 }
 
 .nav-wrapper {
@@ -145,6 +150,70 @@ body{
 	margin-left: 20%;
 }
 
+/* ==========================
+	Search Animation CSS 
+=============================*/ /*
+.container {
+    flex: 0 0 200px;
+    height: 30px;
+    width: 200px;
+    position: relative;
+}
+
+#theInput {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background-color: transparent;
+    border: none;
+    color: white;
+    opacity: 0;
+    transition: opacity .5s;
+    padding: 5px;
+}
+
+.open #theInput {
+    opacity: 1;
+}
+
+#theInput:focus {
+    outline: none;
+}
+
+#searchSvg {
+    margin-left: -92px;
+    transition: margin-left .6s cubic-bezier(0,.5,.5,1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#searchSvg path {
+    stroke: white;
+    stroke-width: 2px;
+    fill: transparent;
+    stroke-dasharray: 75,200;
+    stroke-dashoffset: 75;
+    stroke-linejoin: round;
+    transition: stroke-dasharray .6s cubic-bezier(0,.5,.5,1), stroke-dashoffset .6s cubic-bezier(0,.5,.5,1);
+}
+
+.open #searchSvg {
+    margin-left: 0; 
+}
+
+.open #searchSvg path {
+    stroke-dashoffset: 275;
+    stroke-dasharray: 200,76;
+}
+
+/* End of Search Animation CSS */	
 #navBar .search {
 	-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -217,20 +286,190 @@ body{
         padding: 0 5px;
 }
 
-
-
 .nav-recent{
 	margin: 0 40px 0 56px;
 }
 
+/*=====================================
+				CARDS
+======================================*/
 
 
 
+@media only screen and (max-width : 600px) {
 
+/*===========================================
+					USER CARD
+============================================*/
+	.card-panel {
+		width: 90%;
+		height: auto;
+		margin-top: 24px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+	}
 
+	/* User Info */
+	.user-profile {
+		background-color: #F4F4F4;
+		height: 94px;
+	}
 
+	.avatar {
+		height: 50px;
+		width: 50px;
+		border: 2px solid #000;
+		margin-left: 24px;
+		margin-top: 8px;
+		border-radius: 50%;
+	}
 
+	.user-info {
+		width: 66%;
+		float: right;
+		text-align: center;
+	}
 
+	.user-info h3 {
+		font-size: 16pt;
+		color: rgba(0, 0, 0, 0.68);
+		margin-top: 8px;
+		margin-bottom: 4px;
+		display: inline-block;
+		line-height: 19px;
+	}
+
+	.user-info h4 {
+		font-size: 14pt;
+		color: rgba(0, 0, 0, 0.54);
+		margin-top: 0;
+		margin-bottom: 0;
+		display: inline-block;
+		line-height: 16px;
+	}
+
+	.research-area h4 {
+		font-size: 12pt;
+		color: rgba(0, 0, 0, 0.68);
+		display: inline-block;
+		line-height: 16px;
+		margin-top: 8px;
+		margin-bottom: 0px;
+		margin-left: 8px;
+	}
+	/* End of User Info */
+
+	/* FLOATING ACTION BUTTON */
+	.fba-more {
+			display: inline-block;
+			float: right;
+			margin-top: 8px;
+	}
+
+	.fba-more .btn-floating {
+		width: 48px;
+		height: 48px;
+		line-height: 48px;
+		margin-right: 8px;
+	}
+	
+	.fba-more .btn-floating i {
+		line-height: 48px;
+		font-size: 2.5rem;
+	}
+	/* End of Floating Action Button */
+
+	/* INFO BAR */
+	.info-bar h5 {
+		font-size: 14px;
+		color: rgba(0, 0, 0, 0.54);
+		display: inline-block;
+	}
+
+	.dynamic-info {
+		display: inline;
+	}
+
+	.proximity i {
+		margin-left: 8px;
+		padding-right:4px;
+		color: rgba(0, 0, 0, 0.54);
+		font-size: 1.5rem;
+	}
+
+	.date i {
+		margin-left: 8px;
+		padding-right: 4px;
+		color: rgba(0, 0, 0, 0.54);
+		font-size: 1.5rem;
+	}
+
+	.info-bar {
+		height: 36px;
+		background-color: #fff;
+	}
+
+	.close-btn {
+		visibility: hidden;
+		display: inline-block;
+		float: right;
+	}
+}
+
+		/* End of User Card */
+
+/*=======================================
+			EVENT CARD
+=======================================*/			
+
+	.event-profile {
+		background-color: #F4F4F4;
+		height: 94px;
+	}
+
+	.event-topic {
+		width: 66%;
+		float: right;
+		text-align: center;
+	}
+
+	.event-topic h3 {
+		font-size: 16pt;
+		color: rgba(0, 0, 0, 0.68);
+		margin-top: 8px;
+		margin-bottom: 4px;
+		display: inline-block;
+		line-height: 19px;
+		float: left;
+	}
+
+	.speaker-intro h3 {
+		font-size: 14pt;
+		color: rgba(0, 0, 0, 0.68);
+		margin-top: 0;
+		margin-bottom: 0;
+		display: inline-block;
+		line-height: 16px;
+	}
+
+	.speaker-intro h4 {
+		font-size: 12pt;
+		color: rgba(0, 0, 0, 0.54);
+		display: inline-block;
+		line-height: 14px;
+		margin-top: 8px;
+		margin-bottom: 0px;
+		margin-left: 8px;
+	}
+
+	#event-card .avatar {
+		margin: auto;
+	}
+
+	#event-card .fba-more {
+		margin-top: 16px;
+	}
 /*=======================================
 			SIGN IN MODAL
 ========================================*/
@@ -257,15 +496,3 @@ body{
 	margin-top: 16px;
 	background-color: #E91E63;
 }
-/*=====================================
-				CARDS
-======================================*/
-#recent .card-panel {
-	margin-top: 54px;
-}
-
-#discover .card-panel {
-	margin-top: 54px;
-}
-
-/

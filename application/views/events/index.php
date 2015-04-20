@@ -68,6 +68,14 @@
                 <div class="profile-btn">
                   <a href="#profile" class="navlink"><i class="mdi-action-account-circle"></i></a>
                 </div>
+                <!-- Alternative Search Bar --><!--
+                <div class="container">
+                  <input id="theInput" />
+                  <svg height="31" width="200" id="searchSvg">
+                    <path d="M0 30 L200 30 L192 22 a10,10 0 1 0 -1,1 L192 22" />
+                  </svg>
+                </div>
+                <!-- End of Alternative Search Bar -->
                 <div class="search">
                 <div class="input-field">
                   <input id="search" type="search" required>
@@ -88,12 +96,110 @@
 	<?php endif; ?>
     </section>  
 
-</div>
   <!--======================================
                     CARDS
-  =======================================-->                    
+  =======================================-->  
 
-  
+  	<!--=================================================
+  						USER CARD
+  	===================================================-->                    
+  	<section id="user-card" class="card-panel collapsible" data-collapsible="expandable">
+  			<!--Inital User Card View-->
+  			<div class="user-profile">
+  				<img src="" class="avatar">
+          <div class="user-info">
+  				  <h3 class="user-name right-align">Jennifer Novotney<!--<?php echo "";?>--></h3>
+  				  <h4 class="affiliation right-align">Cornell University<!--<?php echo "";?>--></h4>
+          </div>
+          <div class="research-area">  
+            <h4 class="left-align">Porous Organic Polymers<!--<?php echo "";?>--></h4>
+            <div class="fba-more right-align">
+              <a class="btn-floating btn-large waves-effect waves-light pink"><i class="mdi-navigation-more-horiz"></i> href=""></a>  
+            </div>
+          </div>  
+  			</div>	
+
+  			<div class="info-bar">
+          <div class="dynamic-info">
+  				  <h5 class="proximity"><i class="mdi-maps-pin-drop"></i><!--<?php echo "";?>-->24 miles</h5>
+  				  <h5 class="date"><i class="mdi-action-today"></i><!--<?php echo "";?>-->04/27/15</h5>
+          </div>
+
+  				
+
+  				<!-- Close Overlay -->
+  				<div class="close-btn right-align">
+  					<a href=""><i class="mdi-navigation-close"></i></a>
+  				</div>
+  				<!-- End of Close Overlay -->	
+
+  			</div>
+  			<!-- End of Inital User Card View -->
+
+
+  			<!-- User More Overlay --> <!--
+  			<div class="user-more">
+  				<h4 class="more-header"><?php echo "";?></h4>
+  					<div class="card-nav">
+  						<ul class="animate">
+  							<li><i class=""><a href=""></i></a></li>
+  							<li><i class=""><a href=""></i></a></li>
+  							<li><i class="mdi-action-favorite-outline"><a href=""></i></a></li>
+  						</ul>
+  					</div>
+  				</h4>
+  			</div>	
+  			<!-- End of User More Overlay --> 
+  	</section>
+
+  	<!--=================================================
+  						EVENT CARD
+  	===================================================-->				
+  	
+  	<section id="event-card" class="card-panel collapsible" data-collapsible="expandable">
+
+  			<!--Inital Event Card View-->
+  			<div class="event-profile"> 
+          <div class="event-topic">
+  				  <h3><?php echo "";?>Human Cooperation</h3>
+          </div>
+          <img src="" class="avatar">
+          <div class="speaker-intro">  
+            <h3 class="left-align">David Rand<!--<?php echo "";?>--></h4>
+            <h4 class="left-align">Yale University<!--<?php echo "";?>--></h4>
+            <div class="fba-more right-align">
+              <a class="btn-floating btn-large waves-effect waves-light pink"><i class="mdi-navigation-more-horiz"></i> href=""></a>  
+            </div>
+          </div> 
+  			</div>	
+
+  			<div class="info-bar">
+  				<div class="dynamic-info">
+            <h5 class="proximity"><i class="mdi-maps-pin-drop"></i><!--<?php echo "";?>-->24 miles</h5>
+            <h5 class="date"><i class="mdi-action-today"></i><!--<?php echo "";?>-->04/27/15</h5>
+          </div>
+  				<!-- Close Overlay -->
+  				<div class="close-btn">
+  					<a href=""><i class="mdi-navigation-close"></i></a>
+  				</div>
+  				<!-- End of Close Overlay -->	
+  			</div>
+  			<!-- End of Inital Event Card View -->
+  				
+  			<!-- Event More Overlay --><!--
+  			<div class="event-more">
+  				<h4 class="more-header"><?php echo "";?></h4>
+  					<div class="card-nav">
+  						<ul class="animate">
+  							<li><i class=""><a href=""></i></a></li>
+  							<li><i class=""><a href=""></i></a></li>
+  							<li><i class=""><a href=""></i></a></li>
+  						</ul>
+  					</div>
+  				</h4>
+  			</div>
+  			<!-- End of Event More Overlay --> 
+  	</section>
   <!--======================================
                    MODALS 
   ========================================-->
@@ -170,6 +276,7 @@
           <label for="password">Password</label>
         </div>
 
+<<<<<<< Updated upstream
         <div class="browser-default">
 			<select name="area_science">
 				<option value="" disabled selected>Select your Area of Science</option>
@@ -177,6 +284,22 @@
 				<option value="2">Option 2</option>
 				<option value="3">Option 3</option>
 			</select>
+=======
+        <div class="input-field col s12">
+          <select>
+            <option value="" disabled selected>Select your Area of Science</option>
+            <option value="1">Bio Chemistry</option>
+            <option value="2">Physical Chemistry</option>
+            <option value="3">Organic Chemistry</option>
+            <option value="4">Inorganic Chemistry</option>
+            <option value="5">Analytical Chemistry</option>
+           </select>
+        </div>
+
+        <div class="input-field col s12">
+          <input id="researcharea" type="text" class="validate">
+          <label for="password">Research Area</label>
+>>>>>>> Stashed changes
         </div>
 
         <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
