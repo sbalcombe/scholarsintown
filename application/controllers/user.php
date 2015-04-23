@@ -21,13 +21,13 @@ class User extends CI_Controller {
 			{
 				$this->form_validation->set_message('login', 'Invalid email or password');
 			}
-			redirect('events');
+			redirect('home');
 		}
 		
 		public function logout()
 		{
 			session_destroy();
-			redirect('events', 'refresh');
+			redirect('home', 'refresh');
 		}
 		
 		public function signup()
@@ -51,7 +51,7 @@ class User extends CI_Controller {
 			{
 				$this->form_validation->set_message('signup', 'Invalid form');
 			}
-			redirect('events');
+			redirect('home');
 		}
 		
 		function check_database($password)

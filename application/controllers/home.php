@@ -1,5 +1,5 @@
 <?php
-class Events extends CI_Controller {
+class Home extends CI_Controller {
 
         public function __construct()
         {
@@ -14,13 +14,13 @@ class Events extends CI_Controller {
 				if (isset($_SESSION['logged'])) {
 					$data['logged'] = true;
 				}
-				$this->load->view('events/index', $data);
+				$this->load->view('home/index', $data);
         }
 		
 		public function discover()
         {
                 $data['events'] = $this->events_model->get_events();
-				$this->load->view('events/index', $data);
+				$this->load->view('home/index', $data);
         }
 }
 ?>
