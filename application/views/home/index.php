@@ -272,21 +272,12 @@
         </div>
 
         <div class="input-field col s12">
-          <input id="password" name="password" type="text" class="validate">
+          <input id="password" name="password" type="password" class="validate">
           <label for="password">Password</label>
         </div>
 
-<<<<<<< Updated upstream
-        <div class="browser-default">
-			<select name="area_science">
-				<option value="" disabled selected>Select your Area of Science</option>
-				<option value="1">Option 1</option>
-				<option value="2">Option 2</option>
-				<option value="3">Option 3</option>
-			</select>
-=======
         <div class="input-field col s12">
-          <select>
+          <select name="area_science">
             <option value="" disabled selected>Select your Area of Science</option>
             <option value="1">Bio Chemistry</option>
             <option value="2">Physical Chemistry</option>
@@ -299,7 +290,6 @@
         <div class="input-field col s12">
           <input id="researcharea" type="text" class="validate">
           <label for="password">Research Area</label>
->>>>>>> Stashed changes
         </div>
 
         <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>

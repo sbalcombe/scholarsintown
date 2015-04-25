@@ -9,28 +9,29 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Table `scholars`
+-- Schema sit
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `scholars` ;
+CREATE SCHEMA IF NOT EXISTS `sit` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+USE `sit` ;
 
-CREATE TABLE IF NOT EXISTS `scholars` (
+-- -----------------------------------------------------
+-- Table `sit`.`scholars`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `sit`.`scholars` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `full_name` VARCHAR(45) NOT NULL,
   `affiliation` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `password` VARCHAR(255) NOT NULL,
   `area_science` VARCHAR(45) NOT NULL,
-  `scholarscol` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `series`
+-- Table `sit`.`series`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `series` ;
-
-CREATE TABLE IF NOT EXISTS `series` (
+CREATE TABLE IF NOT EXISTS `sit`.`series` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
@@ -38,47 +39,73 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `events`
+-- Table `sit`.`events`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `events` ;
-
-CREATE TABLE IF NOT EXISTS `events` (
+CREATE TABLE IF NOT EXISTS `sit`.`events` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `speaker_name` VARCHAR(45) NOT NULL,
   `topic` VARCHAR(45) NOT NULL,
   `timestamp` DATETIME NOT NULL,
-  `series_id` INT NOT NULL,
-  PRIMARY KEY (`id`, `series_id`),
+  `series_id` INT NULL,
+  `location` VARCHAR(15) NULL,
+  `location_text` VARCHAR(100) NULL,
+  PRIMARY KEY (`id`),
   CONSTRAINT `fk_events_series`
-    FOREIGN KEY (`id`)
-    REFERENCES `series` (`id`)
-    ON DELETE NO ACTION
+    FOREIGN KEY (`series_id`)
+    REFERENCES `sit`.`series` (`id`)
+    ON DELETE SET NULL
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+CREATE INDEX `fk_events_series_idx` ON `sit`.`events` (`series_id` ASC);
+
 
 -- -----------------------------------------------------
--- Table `events_scholars`
+-- Table `sit`.`attendance`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `events_scholars` ;
-
-CREATE TABLE IF NOT EXISTS `events_scholars` (
+CREATE TABLE IF NOT EXISTS `sit`.`attendance` (
   `events_id` INT NOT NULL,
   `scholars_id` INT NOT NULL,
   PRIMARY KEY (`events_id`, `scholars_id`),
-  INDEX `fk_events_has_scholars_scholars1_idx` (`scholars_id` ASC),
-  INDEX `fk_events_has_scholars_events_idx` (`events_id` ASC),
   CONSTRAINT `fk_events_has_scholars_events`
     FOREIGN KEY (`events_id`)
-    REFERENCES `events` (`id`)
+    REFERENCES `sit`.`events` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_events_has_scholars_scholars1`
     FOREIGN KEY (`scholars_id`)
-    REFERENCES `scholars` (`id`)
+    REFERENCES `sit`.`scholars` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+CREATE INDEX `fk_event_has_scholars_idx` ON `sit`.`attendance` (`scholars_id` ASC);
+
+CREATE INDEX `fk_scholar_has_events_idx` ON `sit`.`attendance` (`events_id` ASC);
+
+
+-- -----------------------------------------------------
+-- Table `sit`.`favorites`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `sit`.`favorites` (
+  `scholar_id` INT NOT NULL,
+  `favorite_id` INT NOT NULL,
+  PRIMARY KEY (`scholar_id`, `favorite_id`),
+  CONSTRAINT `fk_scholar`
+    FOREIGN KEY (`scholar_id`)
+    REFERENCES `sit`.`scholars` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_favorite`
+    FOREIGN KEY (`favorite_id`)
+    REFERENCES `sit`.`scholars` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE INDEX `fk_scholar_has_favorite_idx` ON `sit`.`favorites` (`favorite_id` ASC);
+
+CREATE INDEX `fk_favorite_has_scholar_idx` ON `sit`.`favorites` (`scholar_id` ASC);
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
