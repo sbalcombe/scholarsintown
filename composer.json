@@ -1,0 +1,6 @@
+{
+  "require": {
+    "querypath/QueryPath": ">=3.0.0",
+	"phpmailer/phpmailer": "dev-master"
+  }
+}
