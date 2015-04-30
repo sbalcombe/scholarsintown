@@ -37,66 +37,93 @@
 <body>
 
     <!-- Signup Page (Slide 1)-->
-    <div class="slide">
-        <form id="signup">
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter email">
+    <div class="slide" id="first">
+        <div class="container">
+            <div class="card">
+                <?php
+                $attributes = array('class' => 'col-xs-12');
+                echo form_open('user/signup', $attributes);
+                ?>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Area of Science</label>
+                        <select class="form-control" id="interest">
+                            <option>Organic Chemistry</option>
+                            <option>Inorganic Chemistry</option>
+                            <option>Bio Chemistry</option>
+                            <option>Physical Chemistry</option>
+                            <option>Analytical Chemistry</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn" action="submit">CTA</button>
+                </form>
             </div>
-            <div class="form-group">
-                <select class="form-control">
-                    <option>Organic Chemistry</option>
-                    <option>Inorganic Chemistry</option>
-                    <option>Bio Chemistry</option>
-                    <option>Physical Chemistry</option>
-                    <option>Analytical Chemistry</option>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-default">CTA</button>
-        </form>
+        </div>
 
-        <div class="content">
-            <h4>Value of Signing Up</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="container">
+            <div class="content">
+                <h4>Value of Signing Up</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
         </div>
     </div>    
 
     <!-- Favorite Scholars (Slide 2)-->
     <div class="slide">
-        <form id="favoriteScholars">
-      <!--  <div class="form-group"> -->
-            <input type="text" class="form-control" placeholder="Text input">
-       <!-- </div>-->
-            <button type="button" id="moreScholars">Add</button>
+        <div class="container">
+            <div class="card">
+                <form id="favoriteScholars">
+              <!--  <div class="form-group"> -->
+                    <input type="text" class="form-control" placeholder="Text input">
+               <!-- </div>-->
+                    <button type="button" id="moreScholars">Add</button>
 
-            <button type="submit" class="btn btn-default">CTA</button>
-        </form>
-
-        <div class="content">
-            <h4>Value of adding Favorite Scholars</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button type="submit" class="btn">CTA</button>
+                </form>
+            </div>    
         </div>
+        <div class="container">
+            <div class="content">
+                <h4>Value of adding Favorite Scholars</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>    
     </div>    
     
     <!-- Affiliation (Slide 3)-->
     <div class="slide">
-        <form id="affiliation">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="First Name">
-            </div>   
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Last Name">
-            </div>   
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Affiliation">
-            </div> 
+        <div class="container">
+            <div class="card">
+                <form id="affiliation">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="First Name">
+                            </div>
+                        </div>
 
-            <button type="submit" href="success.php" class="btn btn-default">CTA</button>   
-        </form>
+                        <div class="col-xs-6">   
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Last Name">
+                            </div>
+                        </div>
+                    </div>   
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Affiliation">
+                    </div> 
 
-        <div class="content">
-            <h4>Value of Adding Affiliation</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button type="submit" href="success.php" class="btn">CTA</button>   
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <h4>Value of Adding Affiliation</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
         </div>
     </div>    
 

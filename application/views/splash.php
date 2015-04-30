@@ -52,7 +52,7 @@
        <div class="jumbotron">
             <h1>Value Statement</h1>
             <p>Social Proof</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">CTA</a></p>
+            <p><a class="btn" href="#" role="button">CTA</a></p>
         </div>
 
                         <!-- FOOTER NAVIGATION -->
@@ -71,7 +71,7 @@
                         <!-- LOGIN MODAL -->
 
         <div class="modal" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
+            <div class="modal-dialog modal-sm card">
                 <div class="modal-content">
                      <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -81,7 +81,7 @@
                         <p>One fine body&hellip;</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn" data-dismiss="modal">Close</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
