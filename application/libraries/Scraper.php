@@ -33,9 +33,10 @@ class Scraper_keystonesymposia extends Scraper {
 					$date = trim($or_split[0]);
 					$location = trim($or_split[1]);
 					$speakers = trim($break_split[1]);
-					if($date != null && $location != null && $speakers != null)
+					if($date != null && $topic != null && $location != null && $speakers != null)
 					{
 						$events[] = array(
+								"date" => $date,
 								"topic" => $topic,
 								"location" => $location,
 								"speakers" => $speakers
@@ -44,7 +45,54 @@ class Scraper_keystonesymposia extends Scraper {
 				}
 			}
 			
-			return var_dump($events);
+			return $events;
+		}
+}
+
+class Scraper_GRC extends Scraper {
+
+		private $events = array();
+
+		public function get_events() {
+			$url = 'https://www.grc.org/meetings.aspx?year=2015'; //TODO: append current year
+			$container = htmlqp($url, '#ctl00_ContentPlaceHolder_PageContents_GridView_MeetingList');
+			$string = "";
+			foreach($container->children('tr[onclick]') as $node)
+			{
+				$onclick_attr = $node->attr('onclick');
+				$matches = array();
+				$event_url_quoted = preg_match('/\'.*\'/', $onclick_attr, $matches);
+				$event_url = "http://www.grc.org/" . str_replace('\'', '', $matches[0]);
+				$event_page = htmlqp($event_url, '#ctl00_ContentPlaceHolder_PageContents_Panel_Default');
+				$event_info = $event_page->children('.tblProgramsHeader');
+				$topic = $event_info->find('.divMeetingsHeaderSubtitle')->text();
+				$event_details = $event_info->find('.tdProgramsHeaderMeetingInfo table td:first')->text();
+				$event_details_string = explode('Location', $event_details);
+				$date = trim(str_replace('Location', '', $event_details_string[0]));
+				$location = trim(str_replace('Dates', '', $event_details_string[1]));
+				
+				//Getting speakers
+				$speakers = "";
+				$schedule = $event_page->find('table.tblProgram');
+				foreach($schedule->find('tr td')->filter('b') as $row)
+				{
+					$speakers .= $row->children('b')->text() . ', ';
+				}
+				$speakers = chop($speakers, ', ');
+				
+				if($date != null && $topic != null && $location != null && $speakers != null)
+				{
+					$events[] = array(
+							"date" => $date,
+							"topic" => $topic,
+							"location" => $location,
+							"speakers" => $speakers
+						);
+				}
+				
+			}
+			
+			return events
 		}
 }
 
