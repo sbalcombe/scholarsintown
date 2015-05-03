@@ -13,7 +13,7 @@ class Scraper {
         }
 }
 
-class Scraper_keystonesymposia extends Scraper {
+class Scraper_KS extends Scraper {
 
 		private $events = array();
 
@@ -25,14 +25,22 @@ class Scraper_keystonesymposia extends Scraper {
 				foreach(htmlqp($node, 'a')->not('[name]') as $event)
 				{
 					$event->remove('br');
-					$topic = htmlqp($event)->remove('span')->text();
-					$details = htmlqp($event)->innerHTML(); //contains Date/Location/Organizers
-					$break_split = explode('Scientific Organizers:', $details);
-					$or_split = explode('|', $break_split[0]);
+					$event_url = 'http://www.keystonesymposia.org/' . $event->attr('href');
+					$event_page = htmlqp($event_url, '#inner');
+					$event_container = $event_page->find('#programhead');
+					$topic = $event_container->children('h1:first')->text();
+					$date = $event_container->children('h3:nth-child(4)')->text();
+					$location = $event_container->children('h3:nth-child(5)')->text();
 					
-					$date = trim($or_split[0]);
-					$location = trim($or_split[1]);
-					$speakers = trim($break_split[1]);
+					//Getting speakers
+					$speakers = "";
+					foreach($event_page->find('#maincol > .content > .textleft')->find('.Speaker') as $speaker)
+					{
+						$name = trim($speaker->find('strong > span')->text(), ',\t\n\r\0\x0B');
+						$speakers .= $name . ', ';
+					}
+					$speakers = chop($speakers, ', ');
+					
 					if($date != null && $topic != null && $location != null && $speakers != null)
 					{
 						$events[] = array(
@@ -92,7 +100,7 @@ class Scraper_GRC extends Scraper {
 				
 			}
 			
-			return events
+			return events;
 		}
 }
 
