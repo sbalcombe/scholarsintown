@@ -11,11 +11,12 @@
       <title>SiT Alpha</title>
 
       <!-- Import materialize.css -->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="<?= base_url('css/bootstrap.min.css')?>"  media="screen,projection"/>
       <!-- Import styles.css -->
-      <link type="text/css" rel="stylesheet" href="css/styles.css">
+      <link type="text/css" rel="stylesheet" href="<?= base_url('css/styles.css')?>">
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
     </head>
 
     <body>
@@ -41,32 +42,30 @@
           Hide once logged in -->
     <section id="navBar">   
 	<?php if (!isset($logged) || !$logged): ?>
-        <nav>
-          <div class="nav-wrapper blue">
-            <div class="col s12">
-              <a href="#" class="logo">ScholarsinTown</a>
-              <a class="waves-effect waves-light btn pink modal-trigger" href="#signin">Sign In</a>
-            </div>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="navbar-header">
+        <a class="navbar-brand" rel="home" href="#">ScholarsinTown</a>
+        <a href="#" class="btn btn-default signin">Sign In</a>
+  </div>
 
-          <div class="divider"></div>  
 
-          <div class="col s12">
-              <a class="about secondary-text" href="http://www.scholarsintown.com/about">About</a>
-              <a href="#signup" class="sign-up modal-trigger secondary-text">Get it now</a>
-          </div>    
-        </nav>
+      <div class="links">
+        <a href="#">What is it</a>
+        <a href="#">Get it Now</a>
+      </div>
 
+</nav>
   <!--========================================
                 SIGNED IN NAVBAR
   ==========================================-->
-	<?php else: ?>
-	<a href="<?= site_url('user/logout'); ?>">Logout</a>
-      <div class="navbar-fixed blue">
+	<!-- <a class="waves-effect waves-light btn pink modal-trigger" href="<?= site_url('user/logout'); ?>">Logout</a> -->
+      <div class="navbar">
         <nav class="blue">
           <div class="nav-wrapper blue">
               <div class="search-bar valign-wrapper">
                 <div class="profile-btn">
                   <a href="#profile" class="navlink"><i class="mdi-action-account-circle"></i></a>
+
                 </div>
                 <!-- Alternative Search Bar --><!--
                 <div class="container">
@@ -83,12 +82,7 @@
                 </div>
                 </div>
               </div>
-              <div class="nav-container">
-                <ul>
-                  <li class="nav-recent"><a href="#recent">Recent</a></li>
-                  <li class="nav-discover"><a href="#discover">Discover</a></li>
-                </ul> 
-              </div> 
+
           </div>    
         </nav>
        <a href="#addevent" class="plus-button btn-floating btn-large pink modal-trigger"><i class="mdi-content-add"></i></a>
@@ -354,10 +348,8 @@
       =========================================->  
                     
       <!--Import jQuery before materialize.js-->
-
-      <script type="text/javascript" src="js/jquery.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script type="text/javascript" src="js/custom.js"></script>
+      <script type="text/javascript" src="<?= base_url('js/jquery.min.js')?>"></script>
+      <script type="text/javascript" src="<?= base_url('js/custom.js')?>"></script>
 
     </body>
 </html>
