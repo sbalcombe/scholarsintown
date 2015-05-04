@@ -32,3 +32,11 @@ input.addEventListener("blur", function() {
         container.classList.remove("open");
     }
 });
+
+// Card Expand on Button Click //
+
+$(document).ready(function() {
+    $('.expand').click(function() {
+    $('.panel').slideToggle('slow');
+    });
+});

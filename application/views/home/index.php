@@ -108,7 +108,7 @@
           <div class="research-area">  
             <h4 class="left-align">Porous Organic Polymers<!--<?php echo "";?>--></h4>
             <div class="fba-more right-align">
-              <a class="btn-floating btn-large waves-effect waves-light pink"><i class="mdi-navigation-more-horiz"></i> href=""></a>  
+              <a class="btn-floating btn-large waves-effect waves-light pink expand"><i class="mdi-navigation-more-horiz"></i> href=""></a>  
             </div>
           </div>  
   			</div>	
@@ -118,8 +118,6 @@
   				  <h5 class="proximity"><i class="mdi-maps-pin-drop"></i><!--<?php echo "";?>-->24 miles</h5>
   				  <h5 class="date"><i class="mdi-action-today"></i><!--<?php echo "";?>-->04/27/15</h5>
           </div>
-
-  				
 
   				<!-- Close Overlay -->
   				<div class="close-btn right-align">
