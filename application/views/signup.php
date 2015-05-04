@@ -35,9 +35,6 @@
 </head> 
 
 <body>
-    <div id="slider">
-        <!-- Signup Page (Slide 1)-->
-        <div class="slide" id="one">
             <div class="container">
                 <div class="card">
                     <form>
@@ -61,84 +58,10 @@
             </div>
 
             <div class="container">
-                <div class="content">
-                    <h4>Value of Signing Up</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
+                <h2>Why Sign Up Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
             </div>
-        </div>    
-
-        <!-- Favorite Scholars (Slide 2)-->
-        <div class="slide" id="two">
-            <div class="container">
-                <div class="card">
-                    <form>
-                  <!--  <div class="form-group"> -->
-                        <ul>
-                            <li><input type="text" placeholder="Favorite Scholars"></li>
-                        </ul>
-                   <!-- </div>-->
-                        <button type="button" id="moreScholars">Add</button>
-
-                        <button type="submit" class="btn" href="#three">CTA</button>
-                    </form>
-                </div>    
-            </div>
-            <div class="container">
-                <div class="content">
-                    <h4>Value of adding Favorite Scholars</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-            </div>    
-        </div>    
-        
-        <!-- Affiliation (Slide 3)-->
-        <div class="slide" id="three">
-            <div class="container">
-                <div class="card">
-                    <form id="affiliation">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="First Name">
-                                </div>
-                            </div>
-
-                            <div class="col-xs-6">   
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Last Name">
-                                </div>
-                            </div>
-                        </div>   
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Affiliation">
-                        </div> 
-
-                        <button type="submit" href="success.php" class="btn">CTA</button>   
-                    </form>
-                </div>
-            </div>
-            <div class="container">
-                <div class="content">
-                    <h4>Value of Adding Affiliation</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Links for the slides! -->
-        <ul>
-            <li>
-                <a href="#one"></a>
-            </li>
-            <li>
-                <a href="#two"></a>
-            </li>
-            <li>
-                <a href="#three"></a>
-            </li>
-        </ul>
-    </div>    
 
     <!-- Load jQuery before Bootstrap js -->
     <script type="text/javascript" href="js/jquery.min.js"></script>
