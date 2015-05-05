@@ -37,7 +37,6 @@
 <body>
             <div class="container">
                 <div class="card">
-                    <h4>Welcome</h4>
                     <form>
                         <div class="form-group">
                             <label for="email">Email</label>
@@ -60,7 +59,7 @@
 
             <div class="container text-center explanation">
                 <h3>Value Proposition</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="white-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
             </div>
 

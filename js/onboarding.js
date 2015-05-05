@@ -11,13 +11,13 @@ $(document).ready(function() {
 //Add the input from a text field to a list //
 
 $(document).ready(function() {
-    $('#button').click(function() {
+    $('moreScholars').click(function() {
     var toAdd = $('input[name=checkListItem]').val();
-    $('.list').append('<div class="item">' + toAdd + '</div>');
+    $('.list').append('<div id="addScholars">' + toAdd + '</div>');
     });
 
     //remove element on click //
-    $(document).on('click','.item', function() {
+    $(document).on('click','#addText', function() {
     $(this).remove();
 });
     

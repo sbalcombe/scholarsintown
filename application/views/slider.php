@@ -55,31 +55,7 @@
         <div class="slide" id="two">
             <div class="container">
                 <div class="card">
-                    <form>
-                  <!--  <div class="form-group"> -->
-                        <ul>
-                            <li><input type="text" placeholder="Favorite Scholars"></li>
-                        </ul>
-                   <!-- </div>-->
-                        <button type="button" id="moreScholars">Add</button>
-
-                        <button type="submit" class="btn" href="#three">CTA</button>
-                    </form>
-                </div>    
-            </div>
-            <div class="container">
-                <div class="content">
-                    <h4>Value of adding Favorite Scholars</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-            </div>    
-        </div>    
-        
-        <!-- Affiliation (Slide 3)-->
-        <div class="slide" id="three">
-            <div class="container">
-                <div class="card">
-                    <form id="affiliation">
+                        <form id="affiliation">
                         <div class="row">
                             <div class="col-xs-6">
                                 <div class="form-group">
@@ -98,6 +74,30 @@
                         </div> 
 
                         <button type="submit" href="success.php" class="btn">CTA</button>   
+                    </form>
+                </div>    
+            </div>
+            <div class="container">
+                <div class="content">
+                    <h4>Value of adding Favorite Scholars</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>    
+        </div>    
+        
+        <!-- Affiliation (Slide 3)-->
+        <div class="slide" id="three">
+            <div class="container">
+                <div class="card">
+                    <form>
+                        <div class="form-group">
+                            <ul class="list">
+                                <li><input type="text" name="checklistItem" placeholder="Favorite Scholars" class="addScholars"></li>
+                            </ul>
+                        </div>
+                        <button type="button" id="moreScholars">Add</button>
+
+                        <button type="submit" class="btn" href="#three">CTA</button>
                     </form>
                 </div>
             </div>
