@@ -37,6 +37,7 @@
 <body>
             <div class="container">
                 <div class="card">
+                    <h4>Welcome</h4>
                     <form>
                         <div class="form-group">
                             <label for="email">Email</label>
@@ -52,13 +53,13 @@
                                 <option>Analytical Chemistry</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn" action="submit" href="#two">CTA</button>
+                        <button type="submit" class="btn btn-xlarge center-block" action="submit" href="#two">Sign Up</button>
                     </form>
                 </div>
             </div>
 
-            <div class="container">
-                <h2>Why Sign Up Title</h2>
+            <div class="container text-center explanation">
+                <h3>Value Proposition</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
             </div>
