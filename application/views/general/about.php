@@ -159,8 +159,8 @@
         <nav class="navbar navbar-default navbar-fixed-bottom" id="footer">
             <div class="container">
                 <ul>
-                    <li><a href="<?= site_url('about') ?>">About</a></li>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="<?= site_url('splash') ?>">Home</a></li>
                     <li class="end"><a href="<?= site_url('coming_soon') ?>">Upcoming</a></li>
                 </ul>
             </div>

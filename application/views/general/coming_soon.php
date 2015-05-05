@@ -36,7 +36,17 @@
 
 <body>
 
+                        <!-- FOOTER NAVIGATION -->
 
+        <nav class="navbar navbar-default navbar-fixed-bottom" id="footer">
+            <div class="container">
+                <ul>
+                    <li><a href="<?= site_url('about') ?>">About</a></li>
+                    <li><a href="<?= site_url('splash') ?>">Home</a></li>
+                    <li class="end"><a href="#">Upcoming</a></li>
+                </ul>
+            </div>
+        </nav>    
     <!-- Load jQuery before Bootstrap js -->
     <script type="text/javascript" href="js/jquery.min.js"></script>
 
