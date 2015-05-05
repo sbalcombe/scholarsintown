@@ -3,7 +3,7 @@ class Slider extends CI_Controller {
 
         public function index()
         {
-			$this->load->view('slider');
+			$this->load->view('onboarding/slider');
         }
 }
 ?>

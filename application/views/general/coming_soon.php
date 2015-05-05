@@ -35,33 +35,7 @@
 </head> 
 
 <body>
-            <div class="container">
-                <div class="card">
-                    <form>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter email">
-                        </div>
-                        <div class="form-group">
-                            <label for="interest">Area of Science</label>
-                            <select class="form-control" id="interest">
-                                <option>Organic Chemistry</option>
-                                <option>Inorganic Chemistry</option>
-                                <option>Bio Chemistry</option>
-                                <option>Physical Chemistry</option>
-                                <option>Analytical Chemistry</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-xlarge center-block" action="submit">Sign Up</button>
-                    </form>
-                </div>
-            </div>
 
-            <div class="container text-center explanation">
-                <h3>Value Proposition</h3>
-                <p class="white-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-            </div>
 
     <!-- Load jQuery before Bootstrap js -->
     <script type="text/javascript" href="js/jquery.min.js"></script>

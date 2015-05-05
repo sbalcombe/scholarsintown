@@ -46,13 +46,13 @@
                 <button type="button" class="btn btn-default navbar-btn navbar-right" data-toggle="modal" data-target="#login">Log In</button>
             </div>
         </nav>                
-
+        
 
                         <!-- Content -->
        <div class="jumbotron">
             <h1>Value Statement</h1>
             <p>Social Proof</p>
-            <p><a class="btn" href="#" role="button">CTA</a></p>
+            <p><a class="btn" href="<?= site_url('signup') ?>" role="button">CTA</a></p>
         </div>
 
                         <!-- FOOTER NAVIGATION -->
@@ -60,9 +60,9 @@
         <nav class="navbar navbar-default navbar-fixed-bottom" id="footer">
             <div class="container">
                 <ul>
-                    <li><a href="about.php">About</a></li>
+                    <li><a href="<?= site_url('about') ?>">About</a></li>
                     <li><a href="#">Home</a></li>
-                    <li class="end"><a href="upcoming.php">Upcoming</a></li>
+                    <li class="end"><a href="<?= site_url('coming_soon') ?>">Upcoming</a></li>
                 </ul>
             </div>
         </nav>
@@ -70,8 +70,8 @@
 
                         <!-- LOGIN MODAL -->
 
-        <div class="modal" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm card">
+        <div class="modal" id="login" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
                 <div class="modal-content">
                      <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
