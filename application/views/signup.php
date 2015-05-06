@@ -35,7 +35,6 @@
 </head> 
 
 <body>
-            <div class="container">
                 <div class="card">
                     <form>
                         <div class="form-group">
@@ -55,13 +54,17 @@
                         <button type="submit" class="btn btn-xlarge center-block" action="submit">Sign Up</button>
                     </form>
                 </div>
+
+                <div class="container text-center explanation">
+                    <h3>Value Proposition</h3>
+                    <p class="white-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                </div>
             </div>
 
-            <div class="container text-center explanation">
-                <h3>Value Proposition</h3>
-                <p class="white-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
 
-            </div>
+
 
     <!-- Load jQuery before Bootstrap js -->
     <script type="text/javascript" href="js/jquery.min.js"></script>

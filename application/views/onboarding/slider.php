@@ -13,9 +13,9 @@
     <meta name="author" content="Stuart Balcombe, Hicham Moutahir, Salim Falah">
     <meta name="robots" content="noindex">    
       
-    <!-- Global CSS -->
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Theme CSS -->  
+
     <link rel="stylesheet" href="css/onboarding.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -35,95 +35,86 @@
 </head> 
 
 <body>
-    <div id="slider">
-        <!-- Signup Page (Slide 1)-->
-        <div class="slide" id="one">
 
-            <div class="container">
-                <div class="content">
-                    <h4>Thank you for signing up</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+<div id="a1">
+    <div id="a2">
+        <div id="a3">
+ 
+            <div class="pages">
+                <!-- First Page #a1 -->
+                <div id="i1" class="page">
+                    <h3>Slide 1</h3>
+
+                    <img class="sit_logo" src="http://scholarsintown.com/images/logo-small.png">
+
+                <div class="container text-center explanation">
+                    <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                 </div>
-            </div>
 
-            <div class="container"> 
-                <button type="submit" class="btn" action="submit" href="#two">CTA</button>
-            </div>
-        </div>    
+                <form id="my_form" action="#a2">
+                    <input type="submit" class="btn btn-wide center-block" value="Optimize your emails">
+                </form>
 
-        <!-- Favorite Scholars (Slide 2)-->
-        <div class="slide" id="two">
-            <div class="container">
-                <div class="card">
-                        <form id="affiliation">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="First Name">
-                                </div>
-                            </div>
-
-                            <div class="col-xs-6">   
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Last Name">
-                                </div>
-                            </div>
-                        </div>   
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Affiliation">
-                        </div> 
-
-                        <button type="submit" href="success.php" class="btn">CTA</button>   
-                    </form>
-                </div>    
-            </div>
-            <div class="container">
-                <div class="content">
-                    <h4>Value of adding Favorite Scholars</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
-            </div>    
-        </div>    
-        
-        <!-- Affiliation (Slide 3)-->
-        <div class="slide" id="three">
-            <div class="container">
+                
+                <!-- Second Page #a2 -->
+                <div id="i2" class="page">
+                    <h3>Slide 2</h3>
+
                 <div class="card">
-                    <form>
+                    <form id="my_form" action="#a3">
                         <div class="form-group">
-                            <ul class="list">
-                                <li><input type="text" name="checklistItem" placeholder="Favorite Scholars" class="addScholars"></li>
-                            </ul>
+                            <label for="fname">First Name</label>
+                            <input type="text" class="form-control" id="fname" placeholder=""><br>
+                            <label for="lname">Last Name</label>
+                            <input type="text" class="form-control" id="lname" placeholder=""><br>
+                            <label for="affiliation">Affiliation</label>
+                            <input type="text" class="form-control" id="affiliation" placeholder="">
                         </div>
-                        <button type="button" id="moreScholars">Add</button>
-
-                        <button type="submit" class="btn" href="#three">CTA</button>
+                        <input type="submit" class="btn btn-xlarge center-block" value="Next">
                     </form>
                 </div>
-            </div>
-            <div class="container">
-                <div class="content">
-                    <h4>Value of Adding Affiliation</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+
+                <div class="container text-center explanation">
+                    <h3>Value Proposition</h3>
+                    <p class="white-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                </div>
+                </div>
+                
+                <!-- Third Page #a3 -->
+                <div id="i3" class="page">
+                    <h3>Slide 3</h3>
+
+                <div class="card">
+                    <form id="my_form" action="#a3">
+                        <div class="form-group">
+                            <label for="fscholars">Favorite Scholars</label>
+                            <input type="text" class="form-control" id="fscholars" placeholder="">
+                        </div>
+                        <div class="container">
+                        <a href="#" class="circle-button ">+</a>
+                        </div>
+
+                        <input type="submit" class="btn btn-xlarge center-block signup" value="Sign Up">
+                    </form>
+                </div>
+
+
+                <div class="container text-center explanation">
+                    <h3>Value Proposition</h3>
+                    <p class="white-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
-        <!-- Links for the slides! -->
-        <ul>
-            <li>
-                <a href="#one"></a>
-            </li>
-            <li>
-                <a href="#two"></a>
-            </li>
-            <li>
-                <a href="#three"></a>
-            </li>
-        </ul>
-    </div>    
-                        
-        
+
 
     <!-- Load jQuery before Bootstrap js -->
     <script type="text/javascript" href="js/jquery.min.js"></script>
@@ -133,9 +124,3 @@
     <script type="text/javascript" href="js/onboarding.js"></script>
 </body>
 </html>
-
-
-
-
-
-

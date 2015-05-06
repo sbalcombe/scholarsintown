@@ -35,9 +35,11 @@
 </head> 
 
 <body>
-            <div class="container">
+
+
+
                 <div class="card">
-                    <form>
+                    <form id="my_form" action="#a2">
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" class="form-control" id="email" placeholder="Enter email">
@@ -52,16 +54,25 @@
                                 <option>Analytical Chemistry</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-xlarge center-block" action="submit">Sign Up</button>
+                        <input type="submit" id="" class="btn btn-xlarge center-block" value="Sign Up">
                     </form>
+                    <br>
+                    <!--
+                    <div class="col-md-12">
+                            <div class="alert alert-success"><strong><span class="glyphicon glyphicon-send"></span> Success! Message sent. (If form ok!)</strong></div>   
+                            <div class="alert alert-danger"><span class="glyphicon glyphicon-alert"></span><strong> Error! Please check the inputs. (If form error!)</strong></div>
+                    </div>
+                    -->
+
                 </div>
-            </div>
 
-            <div class="container text-center explanation">
-                <h3>Value Proposition</h3>
-                <p class="white-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-            </div>
+                <div class="container text-center explanation">
+                    <h3>Value Proposition</h3>
+                    <p class="white-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+
+
 
     <!-- Load jQuery before Bootstrap js -->
     <script type="text/javascript" href="js/jquery.min.js"></script>
