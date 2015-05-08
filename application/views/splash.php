@@ -35,36 +35,32 @@
 </head> 
 
 <body>
+<header class="header" data-stellar-background-ratio="0.5" id="home">
+    <div class="overlay-layer">
                         <!-- NavBar -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">
-                        <img alt="Brand" src="images/logo.png">
-                    </a>
-                </div>
-                <button type="button" class="btn btn-default navbar-btn navbar-right" data-toggle="modal" data-target="#login">Log In</button>
+                <!-- <button type="button" class="btn btn-default navbar-btn navbar-right" data-toggle="modal" data-target="#login">Log In</button> -->
             </div>
         </nav>                
         
 
                         <!-- Content -->
        <div class="jumbotron">
-            <h1>Value Statement</h1>
-            <p>Social Proof</p>
-            <p><a class="btn" href="<?= site_url('signup') ?>" role="button">CTA</a></p>
+            <img src="http://scholarsintown.com/images/logo-small.png">
+            <h2 class="center-block">Find talks by your favorite scientists.</h2>
+            <a class="btn btn-medium" href="#">GET STARTED</a>
         </div>
+    </div>
+</header>
 
                         <!-- FOOTER NAVIGATION -->
 
-        <nav class="navbar navbar-default navbar-fixed-bottom" id="footer">
-            <div class="container">
+        <nav class="navbar navbar-default navbar-fixed-bottom white-secondary" id="footer">
                 <ul>
                     <li><a href="<?= site_url('about') ?>">About</a></li>
-                    <li><a href="#">Home</a></li>
                     <li class="end"><a href="<?= site_url('coming_soon') ?>">Upcoming</a></li>
                 </ul>
-            </div>
         </nav>
 
 
@@ -94,6 +90,7 @@
     <script type="text/javascript" href="js/bootstrap.min.js"></script>
 
     <script type="text/javascript" href="js/onboarding.js"></script>
+
 </body>
 </html>
 
