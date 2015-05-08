@@ -25,6 +25,16 @@ input {
   display: block;
 }
 
+.scholar-input {
+	margin-bottom: 0.5em;
+}
+
+a.btn {
+	color: white;
+	text-decoration: none;
+	padding-top: 5px;
+}
+
 
 .btn{
   background-color: #e91e63;

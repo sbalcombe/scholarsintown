@@ -1,26 +1,20 @@
-// js for onboarding flow, includes dependencies for splash.php, signup.php and success.php //
+// js for onboarding flow, includes dependencies for splash.php, signup.php and success.php
 
-//Get the text entry in a form field (checkListItem) when #button is clicked //
-
+//Add the input from a text field to a list
 $(document).ready(function() {
-    $('#button').click(function();
-    var toAdd = $('input[name=checkListItem]').val();
-}); 
-
-
-//Add the input from a text field to a list //
-
-$(document).ready(function() {
-    $('moreScholars').click(function() {
-    var toAdd = $('input[name=checkListItem]').val();
-    $('.list').append('<div id="addScholars">' + toAdd + '</div>');
-    });
-
-    //remove element on click //
-    $(document).on('click','#addText', function() {
-    $(this).remove();
+	$('#add-scholar').click(function() {
+		if ($(".scholar-input").length < 3 && $(".scholar-input:last-child").val() ) {
+			var input = document.createElement("input");
+			input.className = "form-control scholar-input";
+			$("#favorite-scholars").append(input);
+		}
+	});
+	
+	$("#favorite-scholars").on("blur", ".scholar-input", function(e) {
+		if ($(".scholar-input").length > 1) {
+			if (!$(this).val()) { //means empty string
+				$(this).remove();
+			}
+		}
+	});
 });
-    
-}); 
-
-
