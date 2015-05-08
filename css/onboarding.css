@@ -1,9 +1,3 @@
-@font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url('<?= base_url('fonts/glyphicons-halflings-regular.eot')?>');
-  src: url('<?= base_url('fonts/glyphicons-halflings-regular.eot?#iefix')?>') format('embedded-opentype'), url('<?= base_url('fonts/glyphicons-halflings-regular.woff')?>') format('woff'), url('<?= base_url('fonts/glyphicons-halflings-regular.ttf')?>') format('truetype'), url('<?= base_url('fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular')?>') format('svg');
-}
-
 body {
 	height: 100;
 	background-color: #007de3;
@@ -17,6 +11,9 @@ body {
 	color: rgba(0, 0, 0, 0.54);
 }
 
+.white-primary {
+  color: rgba(255, 255, 255, 1);
+}
 .white-secondary {
   color: rgba(255, 255, 255, 0.70);
 }
@@ -58,6 +55,7 @@ body { overflow-x: hidden; /* Hide the other pages */ }
 
 .page .nextbutton { left: auto; right: 0; }
 
+
 /* Pages */
 #i2 { left: 100%; }
 #i3 { left: 200%; }
@@ -76,19 +74,6 @@ transition: left 0.8s;
 #a2:target .pages { left: -100%; }
 #a3:target .pages { left: -200%; }
 
-/* Top Navigation */
-nav {
-display: block;
-position: fixed;
-z-index: 1;
-top: 0;
-left: 0;
-right: 0;
-}
-
-
-
-
 /* This is just make them less ugly */
 body { font-family: sans-serif; text-align: center; }
 h1 { font-size: 2em; }
@@ -102,10 +87,6 @@ label{
 
 .sit_logo{
   margin: 30px 0 20px 0;
-}
-
-.intro{
-  font-size: 16px;
 }
 
 .card {
@@ -181,10 +162,22 @@ label{
   transition: 300ms ease;
 }
 
-.circle-button {
+
+.circle-button:hover {
   text-decoration: none !important;
+  color: #fff;
+}
+.circle-button a:hover {
+  text-decoration: none !important;
+  color: #fff;
 }
 
+.circle-button:hover {
+  background-color: #d51b5a;
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
 
 
 

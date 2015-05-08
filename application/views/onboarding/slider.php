@@ -22,29 +22,34 @@
 </head> 
 
 <body>
+<div class="wrapper">
 <div id="a1">
     <div id="a2">
         <div id="a3">
  
             <div class="pages">
 				<form id="signup-form" action="">
-                <!-- First Page #a1 -->
-                <div id="i1" class="page">
-                    <h3>Slide 1</h3>
+
+                <!-- Verification Email -->
+                <div id="i1" class="page"> 
 
                     <img class="sit_logo" src="http://scholarsintown.com/images/logo-small.png">
 
+
+                
+
                 <div class="container text-center explanation">
-                    <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    <h5 class="white-primary">Help us find the talks you want to hear</h5>
+                    <p class="white-secondary">Choose your preferences</p>
                 </div>
 
-				<a href="#a2" class="btn btn-wide center-block">Optimize your emails</a>
+                <a href="#a2" class="btn btn-wide center-block">Get Started</a>
+				
 
                 </div>
                 
-                <!-- Second Page #a2 -->
-                <div id="i2" class="page">
-                    <h3>Slide 2</h3>
+                <!-- Name and Affiliation-->
+                <div id="i2" class="page"> 
 
                 <div class="card">
                         <div class="form-group">
@@ -60,37 +65,31 @@
 
 
                 <div class="container text-center explanation">
-                    <h3>Value Proposition</h3>
-                    <p class="white-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <h5 class="white-primary">Get talks near you</h5>
+                    <p class="white-secondary">You can find talks within easy driving distance!</p>
 
                 </div>
                 </div>
                 
-                <!-- Third Page #a3 -->
+                <!-- Favorite Scholars and Submit Form -->
                 <div id="i3" class="page">
-                    <h3>Slide 3</h3>
 
                 <div class="card">
+                        <h5 class="primary-text">Choose your favorite scholars</h5>
                         <div class="form-group" id="favorite-scholars">
-                            <label for="fscholars">Favorite Scholars</label>
                             <input type="text" name="fscholars" class="form-control scholar-input">
                         </div>
-<<<<<<< Updated upstream
-                        <div class="container">
-							<a href="#a3" id="add-scholar" class="circle-button">+</a>
-                        </div>
-=======
 
-                        <a href="#" class="circle-button center-block">+</a>
+                        <a href="#a3" class="circle-button center-block" id="add-scholar">+</a>
 
->>>>>>> Stashed changes
+
                         <input type="submit" class="btn btn-xlarge center-block signup" value="Sign Up">
                 </div>
 
 
                 <div class="container text-center explanation">
-                    <h3>Value Proposition</h3>
-                    <p class="white-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <h5 class="white-primary">Get talks by your favorite scholars</h5>
+                    <p class="white-secondary">You can find talks by their co-authors too!</p>
 
                 </div>
                 </div>
@@ -99,7 +98,7 @@
         </div>
     </div>
 </div>
-
+</div>
     <!-- Load jQuery before Bootstrap js -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
