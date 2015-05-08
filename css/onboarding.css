@@ -158,7 +158,7 @@ label{
  } 
 
  .btn-xlarge {
-    margin-top: 45px;
+    margin-top: 30px;
     padding: 10px 58px;
   }
 
@@ -168,8 +168,7 @@ label{
   }  
 
 .circle-button {
-  position: absolute;
-  left: 45%;
+
   background-color: #e91e63;
   width: 45px;
   height: 45px;
@@ -186,9 +185,7 @@ label{
   text-decoration: none !important;
 }
 
-.signup{
-  margin: 80px auto 0 auto;
-}
+
 
 
 
@@ -429,7 +426,7 @@ label{
 }
 
 #signin p {
-	margin: 0auto;
+	margin: 0 auto;
 }
 
 #signin form .btn {

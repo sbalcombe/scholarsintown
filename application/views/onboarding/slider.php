@@ -75,9 +75,15 @@
                             <label for="fscholars">Favorite Scholars</label>
                             <input type="text" name="fscholars" class="form-control scholar-input">
                         </div>
+<<<<<<< Updated upstream
                         <div class="container">
 							<a href="#a3" id="add-scholar" class="circle-button">+</a>
                         </div>
+=======
+
+                        <a href="#" class="circle-button center-block">+</a>
+
+>>>>>>> Stashed changes
                         <input type="submit" class="btn btn-xlarge center-block signup" value="Sign Up">
                 </div>
 
