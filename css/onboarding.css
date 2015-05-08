@@ -6,7 +6,25 @@
 
 body {
 	height: 100;
-	background-color: #007de3;
+	background-color: white ;
+}
+
+.wrapper{
+  background-color: #007de3;
+}
+
+.header {
+    border: 1px solid black;
+    background: url('http://i.imgur.com/NGYF1Kh.jpg') no-repeat center top fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.header .overlay-layer {
+    padding-top: 84px;
+    padding-bottom: 175px;
+    height: 100vh;
+    background: rgba(0, 5, 8, 0.75);
 }
 
 .primary-text {
@@ -40,6 +58,11 @@ a.btn {
   background-color: #e91e63;
   color: white;
   border-color: red;
+}
+
+.navbar ul li a{
+  color: white;
+  text-decoration: none;
 }
 
 
@@ -76,15 +99,6 @@ transition: left 0.8s;
 #a2:target .pages { left: -100%; }
 #a3:target .pages { left: -200%; }
 
-/* Top Navigation */
-nav {
-display: block;
-position: fixed;
-z-index: 1;
-top: 0;
-left: 0;
-right: 0;
-}
 
 
 
@@ -162,10 +176,13 @@ label{
     padding: 10px 58px;
   }
 
-.btn-wide {
-    margin-top: 45px;
+.btn-medium {
+    margin-top: 20px;
     width: 200px;
-  }  
+    height: 50px;
+    line-height: 38px;
+  }
+
 
 .circle-button {
 
@@ -233,6 +250,11 @@ label{
 	margin-right: 0px;
 }
 
+.jumbotron h2{
+  color: white;
+  max-width: 550px;
+}
+
 /*=======================================
 			NavBar
 ========================================*/	
@@ -245,15 +267,11 @@ label{
 
 .navbar li {
 	display: inline;
-	margin-right: 8px;
-}
-
-#footer a {
-	color: rgba(0, 0, 0, 0.54);
+	margin-right: 38px;
 }
 
 #footer a:hover {
-	color: rgba(0, 0, 0, 0.68);
+	color: #E91E63;
 	text-decoration: none;
 }
 
