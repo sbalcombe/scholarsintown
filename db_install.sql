@@ -147,17 +147,17 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `sit`.`onboarding_has_onboarding_favorites` ;
 
 CREATE TABLE IF NOT EXISTS `sit`.`onboarding_has_onboarding_favorites` (
-  `onboarding_id` INT NOT NULL,
+  `onboarding_id` INT NULL,
   `favorite_id` INT NOT NULL,
   PRIMARY KEY (`onboarding_id`, `favorite_id`),
-  INDEX `fk_onboarding_has_onboarding_favorites_onboarding_favorites_idx` (`favorite_id` ASC),
-  INDEX `fk_onboarding_has_onboarding_favorites_onboarding1_idx` (`onboarding_id` ASC),
-  CONSTRAINT `fk_onboarding_has_onboarding_favorites_onboarding1`
+  INDEX `fk_onboarding_has_favorites_idx` (`favorite_id` ASC),
+  INDEX `fk_favorite_has_onboarding_idx` (`onboarding_id` ASC),
+  CONSTRAINT `fk_onboarding_has_favorites`
     FOREIGN KEY (`onboarding_id`)
     REFERENCES `sit`.`onboarding` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_onboarding_has_onboarding_favorites_onboarding_favorites1`
+  CONSTRAINT `fk_favorite_has_onboarding`
     FOREIGN KEY (`favorite_id`)
     REFERENCES `sit`.`onboarding_favorites` (`id`)
     ON DELETE NO ACTION
