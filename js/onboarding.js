@@ -6,6 +6,7 @@ $(document).ready(function() {
 		if ($(".scholar-input").length < 3 && $(".scholar-input:last-child").val() ) {
 			var input = document.createElement("input");
 			input.className = "form-control scholar-input";
+			input.name = "fscholars[]";
 			$("#favorite-scholars").append(input);
 		}
 	});

@@ -6,6 +6,7 @@ class User extends CI_Controller {
                 parent::__construct();
 				$this->load->library('form_validation');
                 $this->load->model('scholar_model');
+                $this->load->model('onboarding_model');
 				$this->output->enable_profiler(false);
         }
 
@@ -52,6 +53,32 @@ class User extends CI_Controller {
 				$this->form_validation->set_message('signup', 'Invalid form');
 			}
 			redirect('home');
+		}
+		
+		public function onboarding()
+		{
+			$this->form_validation->set_rules('email', 'Email', 'trim|required|max_length[45]|valid_email|is_unique[onboarding.email]');
+			$this->form_validation->set_rules('interest', 'Interest', 'trim|required|max_length[45]');
+			$this->form_validation->set_rules('fname', 'First Name', 'trim|required|max_length[45]');
+			$this->form_validation->set_rules('lname', 'Last Name', 'trim|required|max_length[45]');
+			$this->form_validation->set_rules('affiliation', 'Affiliation', 'trim|required|max_length[45]');
+			$this->form_validation->set_rules('fscholars[]', 'Favorite Scholars', 'required');
+			if ($this->form_validation->run() == TRUE)
+			{
+				$email = $this->input->post('email');
+				$interest = $this->input->post('interest');
+				$name = $this->input->post('fname').$this->input->post('lname');
+				$affiliation = $this->input->post('affiliation');
+				$fscholars = $this->input->post('fscholars');
+				if($this->onboarding_model->signup($email, $interest, $name, $affiliation, $fscholars)) {
+					redirect('onboarding/success');
+				}
+			}
+			else
+			{
+				echo "Validation failed";
+				$this->form_validation->set_message('onboarding', 'Invalid form');
+			}
 		}
 		
 		function check_database($password)

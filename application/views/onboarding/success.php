@@ -14,9 +14,9 @@
     <meta name="robots" content="noindex">    
       
     <!-- Global CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css') ?>">
     <!-- Theme CSS -->  
-    <link rel="stylesheet" href="css/onboarding.css">
+    <link rel="stylesheet" href="<?= base_url('css/onboarding.css') ?>">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -40,7 +40,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#">
-                        <img alt="Brand" src="images/logo.png">
+                        <img alt="Brand" src="<?= base_url('images/logo.png') ?>">
                     </a>
                 </div>
                 <button type="button" class="btn btn-default navbar-btn navbar-right" data-toggle="modal" data-target="#login">Log In</button>
@@ -73,10 +73,10 @@
         </nav>
 
     <!-- Load jQuery before Bootstrap js -->
-    <script type="text/javascript" href="js/jquery.min.js"></script>
+    <script type="text/javascript" href="<?= base_url('js/jquery.min.js') ?>"></script>
 
-    <script type="text/javascript" href="js/bootstrap.min.js"></script>
+    <script type="text/javascript" href="<?= base_url('js/bootstrap.min.js') ?>"></script>
 
-    <script type="text/javascript" href="js/onboarding.js"></script>
+    <script type="text/javascript" href="<?= base_url('js/onboarding.js') ?>"></script>
 </body>
 </html>        
