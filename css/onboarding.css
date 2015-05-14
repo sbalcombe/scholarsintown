@@ -1,6 +1,5 @@
 body {
 	height: 100;
-	background-color: white ;
 }
 
 .wrapper{
@@ -168,7 +167,6 @@ label{
     height: 50px;
     line-height: 38px;
   }
-
 
 .circle-button {
 
@@ -451,3 +449,11 @@ label{
 	margin-top: 16px;
 	background-color: #E91E63;
 }
+
+
+
+
+
+
+
+

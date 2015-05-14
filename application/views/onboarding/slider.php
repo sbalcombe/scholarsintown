@@ -22,7 +22,6 @@
 </head> 
 
 <body>
-<div class="wrapper">
 <div id="a1">
     <div id="a2">
         <div id="a3">
@@ -37,12 +36,28 @@
                 <!-- Verification Email -->
                 <div id="i1" class="page">
                     <img class="sit_logo" src="http://scholarsintown.com/images/logo-small.png">
+<!-- <<<<<<< Updated upstream -->
 					<div class="container text-center explanation">
 						<h5 class="white-primary">Help us find the talks you want to hear</h5>
 						<p class="white-secondary">Choose your preferences</p>
 					</div>
-					<a href="#a2" class="btn btn-wide center-block">Get Started</a>
+					<a href="#a2" class="btn btn-medium center-block">Get Started</a>
+<!-- ======= -->
+
+
+                <!--
+
+                <div class="container text-center explanation">
+                    <h5 class="white-primary">Help us find the talks you want to hear</h5>
+                    <p class="white-secondary">Choose your preferences</p>
                 </div>
+
+                <a href="#a2" class="btn btn-medium center-block">Get Started</a>
+				
+
+>>>>>>> Stashed changes
+                </div>
+                -->
                 
                 <!-- Name and Affiliation-->
                 <div id="i2" class="page"> 
@@ -86,7 +101,6 @@
             </div>
         </div>
     </div>
-</div>
 </div>
     <!-- Load jQuery before Bootstrap js -->
     <script type="text/javascript" src="<?= base_url('js/jquery.min.js') ?>"></script>
