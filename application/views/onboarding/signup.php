@@ -50,7 +50,6 @@
 			</div>
 
 			<input type="submit" class="btn btn-xlarge center-block" value="Sign Up">
-		</form>
 		
 		<br />
 		<!--
