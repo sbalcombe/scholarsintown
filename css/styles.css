@@ -756,60 +756,7 @@ select {
 }
 
 
-/*-----------------------------------------
-  3.6 GET EARLY ACCESS MODAL
-------------------------------------------*/  
-.modal-dialog {
-  max-width: 350px;
-  margin: auto;
-  padding-top: 20%;
-}
 
-.modal-content {
-  padding: 10px auto;
-}
-
-.modal-content button {
-  width: 100%;
-}
-
-.horizontal-subscribe-form {
-    display: inline-block;
-    background: rgba(0, 0, 0, 0.75);
-    border-radius: 6px;
-    width: 100%;
-    height: auto;
-}
-
-.horizontal-subscribe-form form {
-    padding-right: 6px;
-}
-
-.horizontal-subscribe-form .standard-button {
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-}
-
-.horizontal-subscribe-form .input-box,
-.horizontal-subscribe-form .standard-button {
-    margin: 3px;
-}
-
-.horizontal-subscribe-form .input-box {
-    font-size: inherit;
-    width: 100%;
-    height: 35px;
-}
-
-.form-inline .standard-button {
-  width: 100%;
-  height: auto;
-  padding: auto;
-  line-height: 2.5;
-  background: #E91E63;
-  border-color: #D21A58;
-
-}
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
   .promo .overview .summary li {

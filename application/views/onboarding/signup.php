@@ -27,20 +27,28 @@
 			$attributes = array('id' => 'onboarding-form');
 			echo form_open('onboarding/setup', $attributes);
 		?>
-			<div class="form-group">
-				<label for="email">Email</label>
-				<input required type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+			<div class="group">
+				<input required type="email" class="form-control" id="email" name="email">
+			    <span class="highlight"></span>
+			    <span class="bar"></span>				
+				<label for="email">Email</label><br>
 			</div>
-			<div class="form-group">
-				<label for="interest">Area of Science</label>
-				<select class="form-control" id="interest" name="interest">
-					<option>Organic Chemistry</option>
-					<option>Inorganic Chemistry</option>
-					<option>Bio Chemistry</option>
-					<option>Physical Chemistry</option>
-					<option>Analytical Chemistry</option>
-				</select>
+
+			<div class="click-nav">
+				<ul class="no-js">
+					<li>
+						<a href="#" class="clicker">Area of Science</a>
+							<ul>
+								<li><a href="#">Organic Chemistry</a></li>
+								<li><a href="#">Inorganic Chemistry</a></li>
+								<li><a href="#">Bio Chemistry</a></li>
+								<li><a href="#">Physical Chemistry</a></li>
+								<li><a href="#">Analytical Chemistry</a></li>						
+							</ul>
+					</li>
+				</ul>
 			</div>
+
 			<input type="submit" class="btn btn-xlarge center-block" value="Sign Up">
 		</form>
 		

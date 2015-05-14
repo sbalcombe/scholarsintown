@@ -74,7 +74,7 @@
                            <!--CTA Buttons-->
                            <ul class="list-inline">
                              <li><a class="btn btn-primary standard-button" href="#section9">Our Team</a></li>
-                             <li><a href="#signup-modal" class="btn btn-primary standard-button" data-toggle="modal">Get Early Access</a></li>  
+                             <li><a href="<?= base_url('onboarding') ?>" class="btn btn-primary standard-button">Get Started</a></li>  
                            </ul>   
                         </div>
 

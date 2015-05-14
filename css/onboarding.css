@@ -1,5 +1,8 @@
+
+
 body {
 	height: 100;
+  background-color: #007de3;
 }
 
 .wrapper{
@@ -157,8 +160,8 @@ label{
  } 
 
  .btn-xlarge {
-    margin-top: 30px;
-    padding: 10px 58px;
+    margin-top: 60px;
+    width: 150px;
   }
 
 .btn-medium {
@@ -450,10 +453,198 @@ label{
 	background-color: #E91E63;
 }
 
+/*=======================================
+      SIGN UP
+========================================*/
+
+.group { 
+  position:relative;
+  margin: 15px 0;
+
+}
+
+.group input {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:250px;
+  border:none;
+  outline: none;
+}
+
+.group input, .group input:focus {
+  border:none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -moz-transition: none;
+  -webkit-transition: none;
+}
+
+.group input:focus{
+  outline:none; 
+}
+
+
+.group label{
+  color:#e91e63; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:5px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+.group input:focus ~ label, input:valid ~ label{
+  top:-24px;
+  font-size:14px;
+  color:#e91e63;
+}
+
+.group > .bar{
+  position:relative;
+  display:block;
+  width:250px; 
+  height: 1px;
+  background-color: black;
+}
+
+.group > .bar:before, .bar:after{
+  content:'';
+  height:2px; 
+  width:0;
+  position:absolute;
+  background:#e91e63; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+.group > .bar:before{
+  left:50%;
+}
+
+.group > .bar:after{
+  right:50%; 
+}
+
+/* active state */
+.group > input:focus ~ .bar:before, input:focus ~ .bar:after{
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight{
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
 
 
 
+input:focus ~ .highlight{
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
 
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter{
+  from{
+   background:#e91e63; 
+  }
+  to{ 
+    width:0;
+    background:transparent; 
+  }
+}
+
+@-moz-keyframes inputHighlighter {
+  from { 
+    background:#e91e63; 
+  }
+  to { 
+    width:0; background:transparent; 
+  }
+}
+
+@keyframes inputHighlighter {
+  from { 
+    background:#e91e63; 
+  }
+  to  { 
+    width:0; 
+    background:transparent; 
+  }
+};
+
+/* DROPDOWN ================================== */
+
+
+
+.click-nav {
+  margin:0 auto;
+  width:200px;
+}
+.click-nav ul {
+  position:relative;
+  font-weight:500;
+  padding: 0;
+}
+
+.click-nav ul li {
+  list-style:none;
+}
+
+.click-nav ul li ul {
+  position:absolute;
+  left:0;
+  right:0;
+}
+
+.click-nav ul .clicker {
+  position:relative;
+  background:#e91e63;
+  color:#FFF;
+}
+
+.click-nav ul .clicker:hover,.click-nav ul .active {
+  background:#d51b5a;
+}
+
+.click-nav ul li a {
+  display:block;
+  padding:8px 10px;
+  background:#FFF;
+  color:#333;
+  text-decoration:none;
+  transition:background-color 0.2s ease-in-out;
+    -webkit-transition:background-color 0.2s ease-in-out;
+    -moz-transition:background-color 0.2s ease-in-out;
+}
+
+.click-nav ul li a:hover {
+  background:#F2F2F2;
+}
+
+/* Fallbacks */
+.click-nav .no-js ul {
+  display:none;
+}
+.click-nav .no-js:hover ul {
+  display:block;
+}
 
 
 
