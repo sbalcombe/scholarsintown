@@ -5,12 +5,13 @@ class Test extends CI_Controller {
         {
                 parent::__construct();
                 $this->load->library('Scraper');
+				$this->load->library('MailchimpWrapper');
 				$this->output->enable_profiler(TRUE);
         }
 
         public function index()
         {
-			echo $this->scraper->scrape_events(array('Scraper_KS'));
+			echo var_dump($this->mailchimpwrapper->list_members_collection_post("fatboy1salim@gmail.com", "subscribed"));
         }
 }
 ?>

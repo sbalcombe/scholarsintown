@@ -5,6 +5,7 @@ class User extends CI_Controller {
         {
                 parent::__construct();
 				$this->load->library('form_validation');
+				$this->load->library('MailchimpWrapper');
                 $this->load->model('scholar_model');
                 $this->load->model('onboarding_model');
 				$this->output->enable_profiler(false);
@@ -12,6 +13,7 @@ class User extends CI_Controller {
 
         public function login()
 		{
+			//TODO: set flashes for errors
 			$this->form_validation->set_rules('email', 'Email', 'trim|required');
 			$this->form_validation->set_rules('password', 'Password', 'trim|required|callback_check_database');
 			if ($this->form_validation->run() == TRUE)
@@ -70,8 +72,15 @@ class User extends CI_Controller {
 				$name = $this->input->post('fname').$this->input->post('lname');
 				$affiliation = $this->input->post('affiliation');
 				$fscholars = $this->input->post('fscholars');
-				if($this->onboarding_model->signup($email, $interest, $name, $affiliation, $fscholars)) {
+				$response = $this->mailchimpwrapper->list_members_collection_post($email, "subscribed");
+				
+				if($this->onboarding_model->signup($email, $interest, $name, $affiliation, $fscholars)
+					&& array_key_exists("id", $response)) {
 					redirect('onboarding/success');
+				}
+				
+				else {
+					//TODO: Error page
 				}
 			}
 			else
