@@ -48,8 +48,8 @@
                         <!-- Content -->
        <div class="jumbotron">
             <img src="http://scholarsintown.com/images/logo-small.png">
-            <h2 class="center-block">Find talks by your favorite scientists.</h2>
-            <a class="btn btn-medium" href="#">GET STARTED</a>
+            <h2 class="center-block">Find talks by your favorite scientists</h2>
+            <a class="btn btn-medium" href="<?= site_url('onboarding') ?>">Get Started</a>
         </div>
     </div>
 </header>
@@ -57,9 +57,9 @@
                         <!-- FOOTER NAVIGATION -->
 
         <nav class="navbar navbar-default navbar-fixed-bottom white-secondary" id="footer">
-                <ul>
-                    <li><a href="<?= site_url('about') ?>">About</a></li>
-                    <li class="end"><a href="<?= site_url('coming_soon') ?>">Upcoming</a></li>
+                <ul class="white-secondary">
+                    <li><a href="<?= site_url('about') ?>">About Us</a></li>
+                    <!--<li class="end"><a href="<?= site_url('coming_soon') ?>">Upcoming</a></li>-->
                 </ul>
         </nav>
 
@@ -93,9 +93,3 @@
 
 </body>
 </html>
-
-
-
-
-
-

@@ -62,8 +62,8 @@
 
 
 	<div class="container text-center explanation">
-		<h3>Value Proposition</h3>
-		<p class="white-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<h3>Get events in your inbox!</h3>
+		<h4 class="white-secondary">We'll send the top 5 events curated for you each week. Just pick your area of science to get started!</h4>
 	</div>
 
     <!-- Load jQuery before Bootstrap js -->

@@ -59,9 +59,13 @@ a.btn {
   border-color: red;
 }
 
-.navbar ul li a{
-  color: white;
+.navbar ul li a {
+  color: rgba(255, 255, 255, 0.70);
   text-decoration: none;
+}
+
+ul {
+  margin-bottom: 0px;
 }
 
 
@@ -107,7 +111,10 @@ label{
 }
 
 .sit_logo{
-  margin: 30px 0 20px 0;
+  padding-top: 20vh;
+  margin: auto;
+  display: block;
+
 }
 
 .card {
@@ -209,11 +216,26 @@ label{
     Text Below
 =======================================*/
 
-.explanation{
+.explanation {
   color: white;
-  max-width: 330px;
-  margin-top: 20px; 
+  max-width: 500px;
+  margin-top: 20px;
 }
+
+.explanation h3 {
+  font-size: 2.0em;
+  font-weight: normal;
+}
+
+.explanation h4 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+@media (max-width: 600px) {
+.explanation {
+  max-width: 90%;
+ }
 
 
 
@@ -252,6 +274,10 @@ label{
 .jumbotron h2{
   color: white;
   max-width: 550px;
+  font-weight: normal;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 /*=======================================
@@ -511,7 +537,7 @@ label{
   display:block;
   width:250px; 
   height: 1px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.12);
 }
 
 .group > .bar:before, .bar:after{

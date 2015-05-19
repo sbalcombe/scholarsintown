@@ -35,14 +35,14 @@
 				<input type="hidden" name="interest" value="<?= $interest ?>">
                 <!-- Verification Email -->
                 <div id="i1" class="page">
+
                     <img class="sit_logo" src="http://scholarsintown.com/images/logo-small.png">
-<!-- <<<<<<< Updated upstream -->
+
 					<div class="container text-center explanation">
-						<h5 class="white-primary">Help us find the talks you want to hear</h5>
-						<p class="white-secondary">Choose your preferences</p>
+						<h3 class="white-primary">Only get the talks you want to hear!</h3>
+						<h4 class="white-secondary">Choose your preferences</h4>
 					</div>
 					<a href="#a2" class="btn btn-medium center-block">Get Started</a>
-<!-- ======= -->
 
 
                 <!--
@@ -74,15 +74,15 @@
 					</div>
 
 					<div class="container text-center explanation">
-						<h5 class="white-primary">Get talks near you</h5>
-						<p class="white-secondary">You can find talks within easy driving distance!</p>
+						<h3 class="white-primary">Get talks near you</h3>
+						<h4 class="white-secondary">You can find talks within easy driving distance!</h4>
 					</div>
                 </div>
                 
                 <!-- Favorite Scholars and Submit Form -->
                 <div id="i3" class="page">
 					<div class="card">
-						<h5 class="primary-text">Choose your favorite scholars</h5>
+						<h4 class="primary-text">Choose your favorite scholars</h5>
 						<div class="form-group" id="favorite-scholars">
 							<input type="text" name="fscholars[]" class="form-control scholar-input">
 						</div>
@@ -92,8 +92,8 @@
 					</div>
 
 					<div class="container text-center explanation">
-						<h5 class="white-primary">Get talks by your favorite scholars</h5>
-						<p class="white-secondary">You can find talks by their co-authors too!</p>
+						<h3 class="white-primary">Get talks by your favorite scholars</h3>
+						<h4 class="white-secondary">You can find talks by their co-authors too!</h4>
 
 					</div>
                 </div>

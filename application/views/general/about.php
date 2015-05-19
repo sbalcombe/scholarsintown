@@ -17,8 +17,6 @@
     <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
     <!-- Plugins CSS -->    
     <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="plugins/flexslider/flexslider.css">
-    <link rel="stylesheet" href="plugins/animate-css/animate.min.css">
     <!-- Theme CSS -->  
     <link rel="stylesheet" href="css/styles.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -66,14 +64,14 @@
                             </div>
 
                             <!-- WELCOME MESSAGE -->
-                            <h3 class="intro white-text">ScholarsinTown</h3>
-                            <h5 class="white-text">Helping scientists find talks by their favorite scholars</h5>
+                            <h3 class="white-text">ScholarsinTown</h3>
+                            <h5 class="white-text">Helping scientists find talks by their favorite scholars!</h5>
                         </div>
 
                         <div class="cta">
                            <!--CTA Buttons-->
                            <ul class="list-inline">
-                             <li><a class="btn btn-primary standard-button" href="#section9">Our Team</a></li>
+                             <li><a class="btn btn-primary standard-button" href="#section9">Meet Our Team</a></li>
                              <li><a href="<?= base_url('onboarding') ?>" class="btn btn-primary standard-button">Get Started</a></li>  
                            </ul>   
                         </div>
@@ -136,6 +134,7 @@
                         </div>
                         <ul class="social-icons">
                             <li><a href="http://www.twitter.com/stub91"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="http://www.blog.stuartbalcombe.me"><i class="fa fa-wordpress"></i></a></li>
                             <li class="row-end"><a href="http://www.linkedin.com/in/stuartbalcombe"><i class="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
