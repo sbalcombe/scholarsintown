@@ -237,6 +237,8 @@ label{
   max-width: 90%;
  }
 
+}
+
 
 
 /*=======================================
@@ -271,7 +273,7 @@ label{
 	margin-right: 0px;
 }
 
-.jumbotron h2{
+.jumbotron h2 {
   color: white;
   max-width: 550px;
   font-weight: normal;
