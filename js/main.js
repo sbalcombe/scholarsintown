@@ -108,3 +108,5 @@ $(function() {
             $('.mailchimp-success').fadeOut(500);
         }
     }
+
+

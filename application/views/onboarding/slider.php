@@ -61,15 +61,26 @@
                 
                 <!-- Name and Affiliation-->
                 <div id="i2" class="page"> 
-					<div class="card">
-							<div class="form-group">
-								<label for="fname">First Name</label>
-								<input type="text" class="form-control" id="fname" name="fname" placeholder=""><br>
-								<label for="lname">Last Name</label>
-								<input type="text" class="form-control" id="lname" name="lname" placeholder=""><br>
-								<label for="affiliation">Affiliation</label>
-								<input type="text" class="form-control" id="affiliation" name="affiliation" placeholder="">
-							</div>
+					<div class="card">	
+                                <div class="group">
+    								<input required type="text" class="form-control" id="fname" name="fname">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label for="fname">First Name</label>
+                                </div><br>
+                                <div class="group">
+    								<input required type="text" class="form-control" id="lname" name="lname">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>   
+                                    <label for="lname">Last Name</label>
+                                    </div><br>
+                                <div class="group">
+    								<input required type="text" class="form-control" id="affiliation" name="affiliation">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>   
+                                    <label for="affiliation">Affiliation</label>
+						        </div> 
+
 							<a href="#a3" class="btn btn-xlarge center-block">Next</a>
 					</div>
 
@@ -84,8 +95,8 @@
 					<div class="card">
 						<h4 class="primary-text">Choose your favorite scholars</h5>
 						<div class="form-group" id="favorite-scholars">
-							<input type="text" name="fscholars[]" class="form-control scholar-input">
-						</div>
+    						<input type="text" name="fscholars[]" class="form-control scholar-input">           
+                        </div>
 						<a href="#a3" class="circle-button center-block" id="add-scholar">+</a>
 						
 						<input type="submit" class="btn btn-xlarge center-block signup" value="Sign Up">
