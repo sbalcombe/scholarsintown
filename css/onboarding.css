@@ -133,6 +133,10 @@ label{
   	background-color: #fff;
 }
 	
+.card h1{
+  text-align: center;
+  margin-top: 90px;
+}
 
 .card h4{
 
