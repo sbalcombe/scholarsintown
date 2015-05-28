@@ -22,17 +22,14 @@
     <![endif]-->
 </head> 
 <body>
-    <div class="card">
-
-        <h1>Success!</h1>
-
+    <div class="preview">
+        <img class="center-block" src="http://scholarsintown.com/images/appmockup.png" alt="Check out our new app coming soon!">
     </div>
-
 
     <div class="container text-center explanation">
         <h3>Congratulations</h3>
         <h4 class="white-secondary">You have completed your registration process!</h4>
-        <h4 class="white-secondary"><meta http-equiv="refresh" content="5;url=http://www.scholarsintown.com/" />You will be redirected in 5 seconds...</h4>
+        <!--<h4 class="white-secondary"><meta http-equiv="refresh" content="15;url=http://www.scholarsintown.com/" />You will be redirected in 15 seconds...</h4>-->
     </div>
 
     <!-- Load jQuery before Bootstrap js -->

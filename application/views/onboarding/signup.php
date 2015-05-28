@@ -34,20 +34,14 @@
 				<label for="email">Email</label><br>
 			</div>
 
-			<div class="click-nav">
-				<ul class="no-js">
-					<li>
-						<a href="#" class="clicker">Area of Science</a>
-							<ul>
-								<li><a href="#">Organic Chemistry</a></li>
-								<li><a href="#">Inorganic Chemistry</a></li>
-								<li><a href="#">Bio Chemistry</a></li>
-								<li><a href="#">Physical Chemistry</a></li>
-								<li><a href="#">Analytical Chemistry</a></li>						
-							</ul>
-					</li>
-				</ul>
+			<div class="group">
+				<input required type="text" class="form-control" id="areaScience" name="areaScience">
+			    <span class="highlight"></span>
+			    <span class="bar"></span>				
+				<label for="areaScience">Area of Science</label><br>
 			</div>
+
+			
 
 			<input type="submit" class="btn btn-xlarge center-block" value="Sign Up">
 		

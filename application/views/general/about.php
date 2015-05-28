@@ -190,42 +190,12 @@
           <li><a href="mailto:admin@scholarsintown.com"><i class="fa fa-envelope"></i></a></li>
           <li class="row-end"><a href="http://bit.ly/contributetosit"><i class="fa fa-file-excel-o"></i></a></li>
         </ul>
-    </footer><!--//footer-->
+    </footer>
 
-    <!-- Feature Modal -->
-     <div class="modal fade bs-example-modal-sm" id="signup-modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-md">
-            <div class="modal-content">        
-                <div class="horizontal-subscribe-form">
-                    <form class="form-inline mailchimp">
-                        <input type="email" id="cf-email" name="email" class="form-control input-box" placeholder="Enter your Email">
-                        <button type="submit" class="btn btn-primary standard-button">Get Early Access</button>
-                    </form>
-
-                    <!-- MAILCHIMP SUCCESS AND ERROR MESSAGE -->
-                    <p class="mailchimp-success white-text"><span class="icon-check-alt2 colored-text"></span>Thanks! Please confirm your email address from your inbox</p>
-                    <p class="mailchimp-error white-text"><span class="icon-close-alt2"></span>Error! Please enter correct email</p>
-                </div>              
-            </div>
-        </div>
-    </div>
      
-    <!-- Javascript -->          
-    <script type="text/javascript" src="plugins/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="plugins/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="plugins/isMobile/isMobile.min.js"></script>       
-    <script type="text/javascript" src="plugins/jquery.easing.1.3.js"></script>   
-    <script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>     
-    <script type="text/javascript" src="plugins/jquery-inview/jquery.inview.min.js"></script>
-    <script type="text/javascript" src="plugins/FitVids/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>    
-    <script type="text/javascript" src="plugins/jquery-placeholder/jquery.placeholder.js"></script>
-    <script type="text/javascript" src="plugins/flexslider/jquery.flexslider-min.js"></script>
-    <script type="text/javascript" src="plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
-    <script type="text/javascript" src="js/jquery.ajaxchimp.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <!--[if !IE]>--> 
-    <script type="text/javascript" src="js/animations.js"></script> 
-    <!--<![endif]-->         
+    <script type="text/javascript" src="js/jquery.min.js"></script> 
+
+    <script type="text/javascript" src="js/onboarding.js"></script> 
+      
 </body>
 </html> 

@@ -47,11 +47,23 @@
 
                         <!-- Content -->
        <div class="jumbotron">
-            <img src="http://scholarsintown.com/images/logo-small.png">
-            <h2 class="center-block">Find talks by your favorite scientists</h2>
-            <a class="btn btn-medium" href="<?= site_url('onboarding') ?>">Get Started</a>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <img src="http://scholarsintown.com/images/logo-small.png">
+            </div>
         </div>
-    </div>
+        <div class="row">    
+            <div class="col-sm-6">
+                <h2 class="center-block">Looking for talks by your favorite scientists?</h2>
+                <a class="btn btn-medium" href="<?= site_url('onboarding') ?>">Get Started</a> 
+            </div>
+            <div class="col-sm-6">
+                <h2 class="center-block">Promoting talks and looking to share?</h2>
+                <a class="btn btn-medium" href="<?= site_url('upload') ?>">Upload Now</a> 
+            </div>  
+        </div>
+        </div>
 </header>
 
                         <!-- FOOTER NAVIGATION -->

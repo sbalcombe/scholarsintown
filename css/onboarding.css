@@ -1,5 +1,3 @@
-
-
 body {
 	height: 100;
   background-color: #007de3;
@@ -676,6 +674,10 @@ input:focus ~ .highlight{
 }
 .click-nav .no-js:hover ul {
   display:block;
+}
+
+.preview {
+  margin-top: 15vh;
 }
 
 
