@@ -9,9 +9,9 @@
       <meta name="robots" content="noindex">  
 
             <!--Import materialize.css-->
-     <link type="text/css" rel="stylesheet" href="<?= base_url('css/materialize.min.css') ?>" media="screen,projection"/>
-     <link type="text/css" rel="stylesheet" href="<?= base_url('css/custom.css') ?>"/>
-     <link type="text/css" rel="stylesheet" href="<?= base_url('css/fontawesome.css') ?>"/>
+     <link type="text/css" rel="stylesheet" href="<?= base_url('materialize.min.css') ?>" media="screen,projection"/>
+     <link type="text/css" rel="stylesheet" href="<?= base_url('custom.css') ?>">
+     <link type="text/css" rel="stylesheet" href="<?= base_url('css/font-awesome/css/font-awesome.min.css') ?>">
     </head>
 
     <body>
@@ -29,26 +29,41 @@
         <section id="about">
           <div class="container">
             <div class="row">
-              <div class="col s12 m3 center-align">
+              <div class="col s12 center-align">
                 <img src="http://scholarsintown.com/images/logo-small.png">
-              </div>
-              <div class="s12 m9">
                 <p>We are working hard to create an awesome product that makes it easy to find the talks YOU want to attend.</p> 
 
                 <p>We have lots of cool ideas and a great team to implement them but we would love to hear what you think!</p>
 
                 <p>Why not get in touch on <a href="http://www.twitter.com/scholarsintown">Twitter</a> or check out what we are working on and leave your suggestions <a href="https://trello.com/b/g1PqaAQs/sit-product-roadmap">here</a>.</p>
-              </div>
-              <div class="row center-align">
-                <a class="waves-effect waves-light btn" href="<?= site_url('onboarding') ?>">Get Started</a>
               </div>  
+            </div>
+            <div class="row center-align">
+                <a class="waves-effect waves-light btn" href="<?= site_url('onboarding') ?>">Get Started</a>
             </div>  
           </div>
         </section>  
 
-    <!--<section id="upcoming">
-          
-        </section>-->
+        <section id="upcoming">
+          <h5>In the <strong>Works</strong></h5>
+          <div class="row">
+
+            <div class="col s12 m5">
+              <h5></h5>
+              <ul>
+                <li>Connect with other attendees</li>
+                <li>Share events with friends</li>
+                <li>Get notifications for talks</li>
+              </ul>
+              <p></p>
+              <a class="waves-effect waves-light btn" href="https://trello.com/b/g1PqaAQs/sit-product-roadmap">Request a Feature</a>
+            </div>
+            <div class="col s12 m7">
+              <img src="">
+            </div>
+
+          </div>
+        </section>
 
         <section id="team">
           <h5>Meet the <strong>Team</strong></h5>
@@ -58,7 +73,7 @@
             <div class="col s12 m3">
               <div class="card">
                 <div class="card-image">
-                  <img src="">
+                  <img src="<?= base_url('images/team/yevavatar.png') ?>">
                 </div>
                 <div class="card-content">
                   <p>Co-Founder</p>
@@ -76,7 +91,7 @@
             <div class="col s12 m3">
               <div class="card">
                 <div class="card-image">
-                  <img src="">
+                  <img src="<?= base_url('images/team/stuavatar.png') ?>">
                 </div>
                 <div class="card-content">
                   <p>Co-Founder</p>
@@ -94,7 +109,7 @@
             <div class="col s12 m3">
               <div class="card">
                 <div class="card-image">
-                  <img src="">
+                  <img src="<?= base_url('images/team/hichamavatar.png') ?>">
                 </div>
                 <div class="card-content">
                   <p>Front End Developer</p>
@@ -111,13 +126,13 @@
             <div class="col s12 m3">
               <div class="card">
                 <div class="card-image">
-                  <img src="">
+                  <img src="<?= base_url('images/team/salimavatar.png') ?>">
                 </div>
                 <div class="card-content">
                   <p>Back End Developer</p>
                 </div>
                 <div class="card-action">
-                  <ul class="socail center-align">
+                  <ul class="social center-align">
                     <li><a href="http://ca.linkedin.com/pub/salim-el-falah/4a/733/688/en"><i class="fa fa-linkedin"></i></a></li>
                     <li><a href="http://bbackerry.deviantart.com/"><i class="fa fa-deviantart"></i></a></li>
                     <li class="row-end"><a href="https://soundcloud.com/falahs"><i class="fa fa-soundcloud"></i></a></li>
