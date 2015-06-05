@@ -1,76 +1,36 @@
-<!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
-<head>
-    <title>ScholarsinTown</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Helping scientists find talks by their favorite scholars">
-    <meta name="keywords" content="science,chemistry,conference,seminars">
-    <meta name="author" content="Stuart Balcombe, Hicham Moutahir, Salim Falah">
-    <meta name="robots" content="noindex">    
-      
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Theme CSS -->  
-    <link rel="stylesheet" href="css/onboarding.css">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//http://www.google-analytics.com/analytics.js','ga');
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+      <meta name="description" content="Helping scientists find talks by their favorite scholars">
+      <meta name="keywords" content="science,chemistry,conference,seminars">
+      <meta name="author" content="Stuart Balcombe, Hicham Moutahir, Salim Falah">
+      <meta name="robots" content="noindex">  
 
-    ga('create', 'UA-57985737-1', 'auto');
-    ga('send', 'pageview');
-    </script>
+            <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="<?= base_url('css/materialize.min.css') ?>" media="screen,projection"/>
+     <link type="text/css" rel="stylesheet" href="<?= base_url('css/custom.css') ?>"/>
+    </head>
+    <body>
+      <header>
+        <nav>
+          <div class="nav-wrapper">
+            <ul id="nav-mobile" class="right">
+              <li><a href="<?= site_url('about') ?>" class="waves-effect waves-light btn">About Us</a></li>
+            </ul>
+          </div>
+        </nav>  
+      </header>
 
-</head> 
+      <main class="center-align">
+        <img src="http://scholarsintown.com/images/logo-small.png">
+        <h3 class="center-block">Find talks by your favorite scientists</h3>
+        <a class="waves-effect waves-light btn-large" href="<?= site_url('onboarding') ?>">Get Started</a>
+      </main>
 
-<body>
-<header class="header" data-stellar-background-ratio="0.5" id="home">
-    <div class="overlay-layer">
-                        <!-- NavBar -->
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <!-- <button type="button" class="btn btn-default navbar-btn navbar-right" data-toggle="modal" data-target="#login">Log In</button> -->
-            </div>
-        </nav>                
-        
-
-                        <!-- Content -->
-       <div class="jumbotron">
-            <img src="http://scholarsintown.com/images/logo-small.png">
-            <h2 class="center-block">Find talks by your favorite scientists</h2>
-            <a class="btn btn-medium" href="<?= site_url('onboarding') ?>">Get Started</a>
-        </div>
-    </div>
-</header>
-
-                        <!-- FOOTER NAVIGATION -->
-
-        <nav class="navbar navbar-default navbar-fixed-bottom white-secondary" id="footer">
-                <ul class="white-secondary">
-                    <li><a href="<?= site_url('about') ?>">About Us</a></li>
-                    <!--<li class="end"><a href="<?= site_url('coming_soon') ?>">Upcoming</a></li>-->
-                </ul>
-        </nav>
-                            
-        
-
-    <!-- Load jQuery before Bootstrap js -->
-    <script type="text/javascript" href="js/jquery.min.js"></script>
-
-    <script type="text/javascript" href="js/bootstrap.min.js"></script>
-
-    <script type="text/javascript" href="js/onboarding.js"></script>
-
-</body>
-</html>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" href="<?= base_url('js/jquery.min.js') ?>"></script>
+    <script type="text/javascript" href="<?= base_url('js/materialize.min.js') ?>"></script>
+    </body>
+  </html>

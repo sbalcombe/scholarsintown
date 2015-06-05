@@ -6,4 +6,7 @@ class Splash extends CI_Controller {
 			$this->load->view('splash');
         }
 }
+
 ?>
+
+

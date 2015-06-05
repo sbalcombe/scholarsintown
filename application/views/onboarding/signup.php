@@ -1,77 +1,52 @@
-<!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
-<head>
-    <title>ScholarsinTown</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Helping scientists find talks by their favorite scholars">
-    <meta name="keywords" content="science,chemistry,conference,seminars">
-    <meta name="author" content="Stuart Balcombe, Hicham Moutahir, Salim Falah">
-    <meta name="robots" content="noindex">    
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <title>ScholarsinTown - Signup</title>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+      <meta name="description" content="Helping scientists find talks by their favorite scholars">
+      <meta name="keywords" content="science,chemistry,conference,seminars">
+      <meta name="author" content="Stuart Balcombe, Hicham Moutahir, Salim Falah">
+      <meta name="robots" content="noindex">  
 
-    <link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/onboarding.css') ?>">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head> 
-<body>
-	<div class="card">
-		<?php
-			$attributes = array('id' => 'onboarding-form');
-			echo form_open('onboarding/setup', $attributes);
-		?>
-			<div class="group">
-				<input required type="email" class="form-control" id="email" name="email">
-			    <span class="highlight"></span>
-			    <span class="bar"></span>				
-				<label for="email">Email</label><br>
-			</div>
+            <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="<?= base_url('css/materialize.min.css') ?>" media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="<?= base_url('css/custom.css') ?>"/>
+    </head>
+    <body>
+      <main>
+          <div class="card-panel" id="signup">
+           <?php
+              $attributes = array('id' => 'onboarding-form');
+              echo form_open('onboarding/setup', $attributes);
+            ?> 
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" name="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>  
 
-			<div class="group">
-				<input required type="text" class="form-control" id="areaScience" name="areaScience">
-			    <span class="highlight"></span>
-			    <span class="bar"></span>				
-				<label for="areaScience">Area of Science</label><br>
-			</div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="interest" type="text" name="areaScience" class="validate">
+                <label for="interest">Area of Interest</label>
+              </div>
+            </div>
 
-			
+            <div class="row center-align">
+              <button type="submit" class="btn waves-effect waves-light"value="Sign Up"</button>
+            </div>
+          </div>
+        <div class="container content center-align">
+          <h4>Events in your inbox?</h4>
+          <p>We'll curate the top 5 talks for you each week. Just pick your area of interest to get started!</p>
+        </div>
+      </main>
 
-			<input type="submit" class="btn btn-xlarge center-block" value="Sign Up">
-		
-		<br />
-		<!--
-		<div class="col-md-12">
-				<div class="alert alert-success"><strong><span class="glyphicon glyphicon-send"></span> Success! Message sent. (If form ok!)</strong></div>   
-				<div class="alert alert-danger"><span class="glyphicon glyphicon-alert"></span><strong> Error! Please check the inputs. (If form error!)</strong></div>
-		</div>
-		-->
-	</div>
-
-
-	<div class="container text-center explanation">
-		<h3>Get events in your inbox!</h3>
-		<h4 class="white-secondary">We'll send the top 5 events curated for you each week. Just pick your area of science to get started!</h4>
-	</div>
-
-    <!-- Load jQuery before Bootstrap js -->
-    <script type="text/javascript" href="<?= base_url('js/jquery.min.js') ?>"></script>
-    <script type="text/javascript" href="<?= base_url('js/bootstrap.min.js') ?>"></script>
-    <script type="text/javascript" href="<?= base_url('js/onboarding.js') ?>"></script>
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//http://www.google-analytics.com/analytics.js','ga');
-
-		ga('create', 'UA-57985737-1', 'auto');
-		ga('send', 'pageview');
-    </script>
-</body>
-</html>
+      <!--Import jQuery before materialize.js-->
+     <script type="text/javascript" href="<?= base_url('js/jquery.min.js') ?>"></script>
+     <script type="text/javascript" href="<?= base_url('js/materialize.min.js') ?>"></script>
+     <script type="text/javascript" href="<?= base_url('js/custom.js') ?>"></script>
+    </body>
+  </html>

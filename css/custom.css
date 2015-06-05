@@ -1,0 +1,114 @@
+/*==============================
+			Splash
+==============================*/
+body {
+	height: vh100;
+}
+
+nav {
+	background: none;
+	box-shadow: none;
+}
+nav ul {
+	margin-right: 20px;
+}
+
+nav ul li:hover {
+        background-color: transparent; 
+}
+
+main img {
+	margin-top: 13vh;
+}
+
+main a {
+	margin-top: 25px;
+}
+
+/*==============================
+			 About
+==============================*/
+#team {
+	width: 90%;
+	margin: auto;
+}
+
+.social li {
+	display: inline;
+}
+
+
+/*==============================
+			 Signup
+==============================*/
+
+
+
+
+
+
+/*==============================
+			 Slider
+==============================*/
+.card-panel {
+	max-width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20vh;
+}
+
+.content {
+	margin-top: 48px;
+}
+
+/* Page 1 */
+#i1 a {
+	margin: 24px 0 24px 0;
+}
+
+/* Page 2 */
+
+/* Page 3*/
+#i3 .btn-floating {
+	margin: 24px 0 24px 0;
+}
+
+
+/* ====================
+	CSS only slider 
+======================*/
+/* Basic Style/Positioning for all Pages */
+body { overflow-x: hidden; /* Hide the other pages */ }
+
+.pages,
+.page,
+.page .backbutton,
+.page .nextbutton  { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.page h1 { margin-top: 4em; /* Make it show below the nav */ }   
+
+.page .backbutton,
+.page .nextbutton { width: 50%; }
+
+.page .nextbutton { left: auto; right: 0; }
+
+/* Pages */
+#i2 { left: 100%; }
+#i3 { left: 200%; }
+
+/* Slide Effect */
+.pages {
+-webkit-transition: left 0.8s;
+-moz-transition: left 0.8s;
+-o-transition: left 0.8s;
+-ms-transition: left 0.8s;
+transition: left 0.8s;
+}
+
+#a1:target .pages { left: 0%; }
+#a2:target .pages { left: -100%; }
+#a3:target .pages { left: -200%; }
+
+/*==============================
+			 Success
+==============================*/
